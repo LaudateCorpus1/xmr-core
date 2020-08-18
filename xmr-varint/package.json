@@ -1,0 +1,75 @@
+{
+  "_from": "@xmr-core/xmr-varint@^0.0.8",
+  "_id": "@xmr-core/xmr-varint@0.0.8",
+  "_inBundle": false,
+  "_integrity": "sha512-dNLYOAX95KZGlFljJ5YPF2gY9x6otPE32pZ6FLu5S55myw+ykUN51zVoph99jfo1iQRl790nRPEzvE3f7OYlxw==",
+  "_location": "/@xmr-core/xmr-varint",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@xmr-core/xmr-varint@^0.0.8",
+    "name": "@xmr-core/xmr-varint",
+    "escapedName": "@xmr-core%2fxmr-varint",
+    "scope": "@xmr-core",
+    "rawSpec": "^0.0.8",
+    "saveSpec": null,
+    "fetchSpec": "^0.0.8"
+  },
+  "_requiredBy": [
+    "/@xmr-core/xmr-crypto-utils",
+    "/@xmr-core/xmr-transaction"
+  ],
+  "_resolved": "https://registry.npmjs.org/@xmr-core/xmr-varint/-/xmr-varint-0.0.8.tgz",
+  "_shasum": "06c5cdb2bf241c86269079e21d8a88c31d72d65f",
+  "_spec": "@xmr-core/xmr-varint@^0.0.8",
+  "_where": "D:\\WWW\\dev_monero\\node_modules\\@xmr-core\\xmr-crypto-utils",
+  "author": {
+    "name": "HenryNguyen5"
+  },
+  "bugs": {
+    "url": "https://github.com/MyCryptoHQ/xmr-core/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@xmr-core/biginteger": "^0.0.8"
+  },
+  "deprecated": false,
+  "description": "Create varints from numbers and strings for usage in Monero's data structures",
+  "devDependencies": {
+    "typescript": "^3.0.0"
+  },
+  "gitHead": "c23b75270350f87bc18cc5c274c8e3271e32ff75",
+  "homepage": "https://github.com/MyCryptoHQ/xmr-core#readme",
+  "keywords": [
+    "xmr-core",
+    "monero",
+    "mymonero",
+    "typescript",
+    "ts",
+    "lightweight",
+    "lightwallet",
+    "wallet",
+    "crypto",
+    "script",
+    "utility",
+    "tool",
+    "xmr"
+  ],
+  "license": "See LICENSE.TXT. Copyright (c) 2014-2018, MyMonero.com. All rights reserved.",
+  "main": "lib/index.js",
+  "name": "@xmr-core/xmr-varint",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MyCryptoHQ/xmr-core.git"
+  },
+  "scripts": {
+    "prepublishOnly": "tsc -b .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "typings": "lib/index.d.ts",
+  "version": "0.0.8"
+}

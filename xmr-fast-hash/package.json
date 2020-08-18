@@ -1,0 +1,77 @@
+{
+  "_from": "@xmr-core/xmr-fast-hash@^0.0.8",
+  "_id": "@xmr-core/xmr-fast-hash@0.0.8",
+  "_inBundle": false,
+  "_integrity": "sha512-jj5XU3E4KSo61tNbHRen12E9qDxO2ZKOCxtfMyGIF4QVhvZDldz1NOybSsf8+FiiFUEGvtd+GylLDJrCbCMj9g==",
+  "_location": "/@xmr-core/xmr-fast-hash",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@xmr-core/xmr-fast-hash@^0.0.8",
+    "name": "@xmr-core/xmr-fast-hash",
+    "escapedName": "@xmr-core%2fxmr-fast-hash",
+    "scope": "@xmr-core",
+    "rawSpec": "^0.0.8",
+    "saveSpec": null,
+    "fetchSpec": "^0.0.8"
+  },
+  "_requiredBy": [
+    "/@xmr-core/xmr-crypto-utils",
+    "/@xmr-core/xmr-mymonero-libs",
+    "/@xmr-core/xmr-transaction"
+  ],
+  "_resolved": "https://registry.npmjs.org/@xmr-core/xmr-fast-hash/-/xmr-fast-hash-0.0.8.tgz",
+  "_shasum": "634d854f48040b0498f589355f94c1dd3dc28e8b",
+  "_spec": "@xmr-core/xmr-fast-hash@^0.0.8",
+  "_where": "D:\\WWW\\dev_monero\\node_modules\\@xmr-core\\xmr-mymonero-libs",
+  "author": {
+    "name": "HenryNguyen5"
+  },
+  "bugs": {
+    "url": "https://github.com/MyCryptoHQ/xmr-core/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@xmr-core/xmr-str-utils": "^0.0.8",
+    "keccakjs": "^0.2.1"
+  },
+  "deprecated": false,
+  "description": "An implementation of Monero's `cn_fast_hash`",
+  "devDependencies": {
+    "typescript": "^3.0.0"
+  },
+  "gitHead": "c23b75270350f87bc18cc5c274c8e3271e32ff75",
+  "homepage": "https://github.com/MyCryptoHQ/xmr-core#readme",
+  "keywords": [
+    "xmr-core",
+    "monero",
+    "mymonero",
+    "typescript",
+    "ts",
+    "lightweight",
+    "lightwallet",
+    "wallet",
+    "crypto",
+    "script",
+    "utility",
+    "tool",
+    "xmr"
+  ],
+  "license": "See LICENSE.TXT. Copyright (c) 2014-2018, MyMonero.com. All rights reserved.",
+  "main": "lib/index.js",
+  "name": "@xmr-core/xmr-fast-hash",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MyCryptoHQ/xmr-core.git"
+  },
+  "scripts": {
+    "prepublishOnly": "tsc -b .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "typings": "lib/index.d.ts",
+  "version": "0.0.8"
+}

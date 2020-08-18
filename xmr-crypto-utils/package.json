@@ -1,0 +1,83 @@
+{
+  "_from": "@xmr-core/xmr-crypto-utils@^0.0.8",
+  "_id": "@xmr-core/xmr-crypto-utils@0.0.8",
+  "_inBundle": false,
+  "_integrity": "sha512-Ehz5mHoq77LHBe178qqsAHShabseLaK2F4O1wxzgTGKRFSk8loW1hEf+m20Qhy7smCKoSzLpSdSwpuvwfudmmw==",
+  "_location": "/@xmr-core/xmr-crypto-utils",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@xmr-core/xmr-crypto-utils@^0.0.8",
+    "name": "@xmr-core/xmr-crypto-utils",
+    "escapedName": "@xmr-core%2fxmr-crypto-utils",
+    "scope": "@xmr-core",
+    "rawSpec": "^0.0.8",
+    "saveSpec": null,
+    "fetchSpec": "^0.0.8"
+  },
+  "_requiredBy": [
+    "/@xmr-core/xmr-mymonero-libs",
+    "/@xmr-core/xmr-transaction"
+  ],
+  "_resolved": "https://registry.npmjs.org/@xmr-core/xmr-crypto-utils/-/xmr-crypto-utils-0.0.8.tgz",
+  "_shasum": "c66972c3e720f02b170bc1174c7584c6be58588e",
+  "_spec": "@xmr-core/xmr-crypto-utils@^0.0.8",
+  "_where": "D:\\WWW\\dev_monero\\node_modules\\@xmr-core\\xmr-mymonero-libs",
+  "author": {
+    "name": "HenryNguyen5"
+  },
+  "bugs": {
+    "url": "https://github.com/MyCryptoHQ/xmr-core/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@ledgerhq/hw-transport-node-hid": "^4.22.0",
+    "@xmr-core/biginteger": "^0.0.8",
+    "@xmr-core/xmr-fast-hash": "^0.0.8",
+    "@xmr-core/xmr-str-utils": "^0.0.8",
+    "@xmr-core/xmr-varint": "^0.0.8",
+    "@xmr-core/xmr-vendor": "^0.0.8",
+    "node-hid": "^0.7.3",
+    "u2f-api": "^1.0.6"
+  },
+  "deprecated": false,
+  "description": "Core crypto operations for Monero and implementations and interfaces of various hardware devices for creating Monero transactions securely",
+  "devDependencies": {
+    "@types/node-hid": "^0.7.0",
+    "typescript": "^3.0.0"
+  },
+  "gitHead": "c23b75270350f87bc18cc5c274c8e3271e32ff75",
+  "homepage": "https://github.com/MyCryptoHQ/xmr-core#readme",
+  "keywords": [
+    "xmr-core",
+    "monero",
+    "mymonero",
+    "typescript",
+    "ts",
+    "lightweight",
+    "lightwallet",
+    "wallet",
+    "crypto",
+    "script",
+    "utility",
+    "tool",
+    "xmr"
+  ],
+  "license": "See LICENSE.TXT. Copyright (c) 2014-2018, MyMonero.com. All rights reserved.",
+  "main": "lib/index.js",
+  "name": "@xmr-core/xmr-crypto-utils",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MyCryptoHQ/xmr-core.git"
+  },
+  "scripts": {
+    "prepublishOnly": "tsc -b .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "typings": "lib/index.d.ts",
+  "version": "0.0.8"
+}
