@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const biginteger_1 = require("@xmr-core/biginteger");
+const biginteger_1 = require("xmr-core/biginteger");
 function encode_varint(input) {
     let i = new biginteger_1.BigInt(input);
     let out = "";

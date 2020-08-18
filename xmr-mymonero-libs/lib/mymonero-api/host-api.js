@@ -37,11 +37,11 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var request_utils_1 = require("./request-utils");
 var mymonero_config_1 = require("../mymonero-config");
-var xmr_constants_1 = require("@xmr-core/xmr-constants");
+var xmr_constants_1 = require("xmr-core/xmr-constants");
 var response_parsers_1 = require("./response-parsers");
-var biginteger_1 = require("@xmr-core/biginteger");
-var xmr_crypto_utils_1 = require("@xmr-core/xmr-crypto-utils");
-var xmr_str_utils_1 = require("@xmr-core/xmr-str-utils");
+var biginteger_1 = require("xmr-core/biginteger");
+var xmr_crypto_utils_1 = require("xmr-core/xmr-crypto-utils");
+var xmr_str_utils_1 = require("xmr-core/xmr-str-utils");
 var MyMoneroApi = /** @class */ (function () {
     function MyMoneroApi() {
     }

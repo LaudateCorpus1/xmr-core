@@ -15,7 +15,7 @@ import {
 	CtKeyV,
 } from "./types";
 import * as crypto from "../crypto-ops";
-import { cn_fast_hash } from "@xmr-core/xmr-fast-hash";
+import { cn_fast_hash } from "xmr-core/xmr-fast-hash";
 import {
 	secret_key_to_public_key,
 	generate_keys,

@@ -5,7 +5,7 @@ import {
 	ge_scalarmult,
 } from "./primitive_ops";
 import { H, I } from "./constants";
-import { valid_hex } from "@xmr-core/xmr-str-utils";
+import { valid_hex } from "xmr-core/xmr-str-utils";
 import { hash_to_scalar } from "./hash_ops";
 import { derivation_to_scalar, generate_key_derivation } from "./derivation";
 import { Commit, Keys } from "../types";

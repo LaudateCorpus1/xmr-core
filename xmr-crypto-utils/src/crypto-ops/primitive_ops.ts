@@ -1,5 +1,5 @@
-import { CNCrypto, nacl } from "@xmr-core/xmr-vendor";
-import { bintohex, hextobin, valid_hex } from "@xmr-core/xmr-str-utils";
+import { CNCrypto, nacl } from "xmr-core/xmr-vendor";
+import { bintohex, hextobin, valid_hex } from "xmr-core/xmr-str-utils";
 import { STRUCT_SIZES, KEY_SIZE } from "./constants";
 import { hash_to_ec_2 } from "./hash_ops";
 

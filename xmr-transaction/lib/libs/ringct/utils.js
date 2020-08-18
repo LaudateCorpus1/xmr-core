@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const serialization_1 = require("./serialization");
-const xmr_fast_hash_1 = require("@xmr-core/xmr-fast-hash");
+const xmr_fast_hash_1 = require("xmr-core/xmr-fast-hash");
 const prove_range_1 = require("./components/prove_range");
 function get_pre_mlsag_hash(rv, mixRing, hwdev) {
     let hashes = [];

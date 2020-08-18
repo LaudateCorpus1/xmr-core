@@ -1,6 +1,6 @@
-import { CNCrypto } from "@xmr-core/xmr-vendor";
+import { CNCrypto } from "xmr-core/xmr-vendor";
 import { KEY_SIZE, STRUCT_SIZES } from "./constants";
-import { hextobin, bintohex } from "@xmr-core/xmr-str-utils";
+import { hextobin, bintohex } from "xmr-core/xmr-str-utils";
 import { hash_to_ec } from "./hash_ops";
 import { HWDevice } from "../device";
 

@@ -1,6 +1,6 @@
-import { config } from "@xmr-core/xmr-constants";
+import { config } from "xmr-core/xmr-constants";
 import { possibleOAAddress } from "../mymonero-send-tx/internal_libs/open_alias_lite";
-import { decode_address, NetType } from "@xmr-core/xmr-crypto-utils";
+import { decode_address, NetType } from "xmr-core/xmr-crypto-utils";
 import { Omit } from "../types";
 
 export enum URITypes {

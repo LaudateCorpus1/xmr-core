@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const xmr_crypto_utils_1 = require("@xmr-core/xmr-crypto-utils");
+const xmr_crypto_utils_1 = require("xmr-core/xmr-crypto-utils");
 const mlsag_1 = require("./mlsag");
-const xmr_str_utils_1 = require("@xmr-core/xmr-str-utils");
+const xmr_str_utils_1 = require("xmr-core/xmr-str-utils");
 const { ge_sub, ge_add, sc_sub } = xmr_crypto_utils_1.primitive_ops;
 const { identity } = xmr_crypto_utils_1.constants;
 //Ring-ct MG sigs

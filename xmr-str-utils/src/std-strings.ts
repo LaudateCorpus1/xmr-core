@@ -1,4 +1,4 @@
-import { BigInt } from "@xmr-core/biginteger";
+import { BigInt } from "xmr-core/biginteger";
 
 export function trimRight(str: string, char: string) {
 	while (str[str.length - 1] == char) str = str.slice(0, -1);

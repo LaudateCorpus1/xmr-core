@@ -43,7 +43,7 @@ function withUserAgentParams(params) {
     // setting these on params instead of as header field User-Agent so as to retain all info found in User-Agent
     // such as platform… and these are set so server has option to control delivery
     return Object.assign(params, {
-        app_name: "@xmr-core/mymonero-api",
+        app_name: "xmr-core/mymonero-api",
         app_version: "0.0.1",
     });
 }

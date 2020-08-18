@@ -1,4 +1,4 @@
-import { BigInt } from "@xmr-core/biginteger";
+import { BigInt } from "xmr-core/biginteger";
 export declare namespace ERR {
     namespace RING {
         const INSUFF: Error;

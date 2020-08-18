@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var xmr_money_1 = require("@xmr-core/xmr-money");
+var xmr_money_1 = require("xmr-core/xmr-money");
 var Log;
 (function (Log) {
     var Amount;

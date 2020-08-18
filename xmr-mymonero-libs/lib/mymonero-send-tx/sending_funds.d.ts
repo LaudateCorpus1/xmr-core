@@ -1,10 +1,10 @@
 import { Status } from "./status_update_constants";
-import { BigInt } from "@xmr-core/biginteger";
-import { Pid, ViewSendKeys } from "@xmr-core/xmr-transaction";
+import { BigInt } from "xmr-core/biginteger";
+import { Pid, ViewSendKeys } from "xmr-core/xmr-transaction";
 import { MyMoneroApi } from "../";
 import { selectOutputsAndAmountForMixin } from "./internal_libs/output_selection";
-import { NetType, HWDevice } from "@xmr-core/xmr-crypto-utils";
-export declare function estimatedTransactionNetworkFee(nonZeroMixin: number, feePerKB: BigInt, simplePriority: number): import("@xmr-core/biginteger/vendor/biginteger").BigInteger;
+import { NetType, HWDevice } from "xmr-core/xmr-crypto-utils";
+export declare function estimatedTransactionNetworkFee(nonZeroMixin: number, feePerKB: BigInt, simplePriority: number): import("xmr-core/biginteger/vendor/biginteger").BigInteger;
 export declare type SendFundsRet = {
     targetAddress: string;
     sentAmount: number;

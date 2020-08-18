@@ -1,6 +1,6 @@
-import { BigInt } from "@xmr-core/biginteger";
-import { formatMoney } from "@xmr-core/xmr-money";
-import { config } from "@xmr-core/xmr-constants";
+import { BigInt } from "xmr-core/biginteger";
+import { formatMoney } from "xmr-core/xmr-money";
+import { config } from "xmr-core/xmr-constants";
 
 export namespace ERR {
 	export namespace RING {

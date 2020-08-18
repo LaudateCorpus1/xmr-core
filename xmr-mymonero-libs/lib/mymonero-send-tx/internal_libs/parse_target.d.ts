@@ -1,5 +1,5 @@
-import { ParsedTarget, RawTarget } from "@xmr-core/xmr-transaction";
-import { NetType } from "@xmr-core/xmr-crypto-utils";
+import { ParsedTarget, RawTarget } from "xmr-core/xmr-transaction";
+import { NetType } from "xmr-core/xmr-crypto-utils";
 /**
  * @description Map through the provided targets and normalize each address/amount pair
  *

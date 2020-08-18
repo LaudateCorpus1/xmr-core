@@ -1,10 +1,10 @@
-import { encode_varint } from "@xmr-core/xmr-varint";
-import { cn_fast_hash } from "@xmr-core/xmr-fast-hash";
-import { cnBase58 } from "@xmr-core/xmr-b58";
+import { encode_varint } from "xmr-core/xmr-varint";
+import { cn_fast_hash } from "xmr-core/xmr-fast-hash";
+import { cnBase58 } from "xmr-core/xmr-b58";
 import {
 	INTEGRATED_ID_SIZE,
 	ADDRESS_CHECKSUM_SIZE,
-} from "@xmr-core/xmr-constants";
+} from "xmr-core/xmr-constants";
 import { Account, NetType } from "./types";
 import { sc_reduce32 } from "../crypto-ops/primitive_ops";
 import { generate_keys, pubkeys_to_string } from "../key-utils";

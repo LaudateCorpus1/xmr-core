@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const borromean_1 = require("./borromean");
-const xmr_crypto_utils_1 = require("@xmr-core/xmr-crypto-utils");
-const xmr_str_utils_1 = require("@xmr-core/xmr-str-utils");
+const xmr_crypto_utils_1 = require("xmr-core/xmr-crypto-utils");
+const xmr_str_utils_1 = require("xmr-core/xmr-str-utils");
 const { sc_add, ge_sub, ge_add, ge_scalarmult_base, } = xmr_crypto_utils_1.primitive_ops;
 const { I, Z, identity, H2 } = xmr_crypto_utils_1.constants;
 //proveRange

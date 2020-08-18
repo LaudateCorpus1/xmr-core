@@ -1,4 +1,4 @@
-import { BigInt } from "@xmr-core/biginteger";
+import { BigInt } from "xmr-core/biginteger";
 import { ParsedTarget } from "./types";
 export declare function formatMoneyFull(units: BigInt | string): string;
 export declare function formatMoneyFullWithSymbol(units: BigInt | string): string;

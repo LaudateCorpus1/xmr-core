@@ -1,4 +1,4 @@
-# @xmr-core/xmr-crypto-utils
+# xmr-core/xmr-crypto-utils
 
 Core crypto operations for Monero
 
@@ -37,22 +37,22 @@ Core crypto operations for Monero
 ---
 
 ```ts
-import { generate_key_image } from "@xmr-core/xmr-crypto-utils";
+import { generate_key_image } from "xmr-core/xmr-crypto-utils";
 const secretKey = "...";
 const publicKey = "...";
 const keyImage = generate_key_image(publicKey, secretKey);
 ```
 
-See `@xmr-core/xmr-transaction` to see how the device portions of `@xmr-core/xmr-crypto-utils` is used in the context of creating transactions, or `@xmr-core/xmr-mymonero-libs` to see how its used for checking if transactions belong to the current hardware device being used.
+See `xmr-core/xmr-transaction` to see how the device portions of `xmr-core/xmr-crypto-utils` is used in the context of creating transactions, or `xmr-core/xmr-mymonero-libs` to see how its used for checking if transactions belong to the current hardware device being used.
 
 ## Installation
 
 ---
 
-Install @xmr-core/xmr-crypto-utils by running:
+Install xmr-core/xmr-crypto-utils by running:
 
 ```sh
-yarn add @xmr-core/xmr-crypto-utils
+yarn add xmr-core/xmr-crypto-utils
 ```
 
 ## License

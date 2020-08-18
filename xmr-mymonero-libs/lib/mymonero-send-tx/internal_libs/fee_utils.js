@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var biginteger_1 = require("@xmr-core/biginteger");
+var biginteger_1 = require("xmr-core/biginteger");
 exports.DEFAULT_FEE_PRIORITY = 1;
 function calculateFee(feePerKB, numOfBytes, feeMultiplier) {
     var numberOf_kB = new biginteger_1.BigInt((numOfBytes + 1023.0) / 1024.0); // i.e. ceil

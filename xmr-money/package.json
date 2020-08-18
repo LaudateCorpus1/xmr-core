@@ -1,29 +1,29 @@
 {
-  "_from": "@xmr-core/xmr-money@^0.0.8",
-  "_id": "@xmr-core/xmr-money@0.0.8",
+  "_from": "xmr-core/xmr-money@^0.0.8",
+  "_id": "xmr-core/xmr-money@0.0.8",
   "_inBundle": false,
   "_integrity": "sha512-9SpepIlM4AQKQ7+p3zmdJVSZf6Jb9L68jSLTJ6EdXUGjc8AYdiw58A2p71WWEdvfFNIGEQJ6VkdN9Se4qLJf1Q==",
-  "_location": "/@xmr-core/xmr-money",
+  "_location": "/xmr-core/xmr-money",
   "_phantomChildren": {},
   "_requested": {
     "type": "range",
     "registry": true,
-    "raw": "@xmr-core/xmr-money@^0.0.8",
-    "name": "@xmr-core/xmr-money",
-    "escapedName": "@xmr-core%2fxmr-money",
-    "scope": "@xmr-core",
+    "raw": "xmr-core/xmr-money@^0.0.8",
+    "name": "xmr-core/xmr-money",
+    "escapedName": "xmr-core%2fxmr-money",
+    "scope": "xmr-core",
     "rawSpec": "^0.0.8",
     "saveSpec": null,
     "fetchSpec": "^0.0.8"
   },
   "_requiredBy": [
-    "/@xmr-core/xmr-mymonero-libs",
-    "/@xmr-core/xmr-transaction"
+    "/xmr-core/xmr-mymonero-libs",
+    "/xmr-core/xmr-transaction"
   ],
-  "_resolved": "https://registry.npmjs.org/@xmr-core/xmr-money/-/xmr-money-0.0.8.tgz",
+  "_resolved": "https://registry.npmjs.org/xmr-core/xmr-money/-/xmr-money-0.0.8.tgz",
   "_shasum": "443bcadcd828a3f527ce017c14afc9a6c9a80d0a",
-  "_spec": "@xmr-core/xmr-money@^0.0.8",
-  "_where": "D:\\WWW\\dev_monero\\node_modules\\@xmr-core\\xmr-mymonero-libs",
+  "_spec": "xmr-core/xmr-money@^0.0.8",
+  "_where": "D:\\WWW\\dev_monero\\node_modules\\xmr-core\\xmr-mymonero-libs",
   "author": {
     "name": "HenryNguyen5"
   },
@@ -32,7 +32,7 @@
   },
   "bundleDependencies": false,
   "dependencies": {
-    "@xmr-core/biginteger": "^0.0.8"
+    "xmr-core/biginteger": "^0.0.8"
   },
   "deprecated": false,
   "description": "Helpers for formatting and parsing Moneroj",
@@ -58,7 +58,7 @@
   ],
   "license": "See LICENSE.TXT. Copyright (c) 2014-2018, MyMonero.com. All rights reserved.",
   "main": "lib/index.js",
-  "name": "@xmr-core/xmr-money",
+  "name": "xmr-core/xmr-money",
   "publishConfig": {
     "access": "public"
   },

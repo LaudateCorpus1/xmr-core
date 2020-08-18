@@ -1,11 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const xmr_vendor_1 = require("@xmr-core/xmr-vendor");
+const xmr_vendor_1 = require("xmr-core/xmr-vendor");
 const constants_1 = require("./constants");
-const xmr_varint_1 = require("@xmr-core/xmr-varint");
+const xmr_varint_1 = require("xmr-core/xmr-varint");
 const hash_ops_1 = require("./hash_ops");
 const primitive_ops_1 = require("./primitive_ops");
-const xmr_str_utils_1 = require("@xmr-core/xmr-str-utils");
+const xmr_str_utils_1 = require("xmr-core/xmr-str-utils");
 function generate_key_derivation(pub, sec) {
     if (pub.length !== 64 || sec.length !== 64) {
         throw Error("Invalid input length");

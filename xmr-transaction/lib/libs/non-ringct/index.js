@@ -3,9 +3,9 @@ function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 Object.defineProperty(exports, "__esModule", { value: true });
-const xmr_crypto_utils_1 = require("@xmr-core/xmr-crypto-utils");
-const xmr_str_utils_1 = require("@xmr-core/xmr-str-utils");
-const xmr_vendor_1 = require("@xmr-core/xmr-vendor");
+const xmr_crypto_utils_1 = require("xmr-core/xmr-crypto-utils");
+const xmr_str_utils_1 = require("xmr-core/xmr-str-utils");
+const xmr_vendor_1 = require("xmr-core/xmr-vendor");
 const { STRUCT_SIZES, KEY_SIZE, HASH_SIZE } = xmr_crypto_utils_1.constants;
 const { hash_to_ec, hash_to_scalar } = xmr_crypto_utils_1.hash_ops;
 __export(require("./serialization"));

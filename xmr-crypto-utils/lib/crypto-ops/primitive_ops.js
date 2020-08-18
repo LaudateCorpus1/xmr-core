@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const xmr_vendor_1 = require("@xmr-core/xmr-vendor");
-const xmr_str_utils_1 = require("@xmr-core/xmr-str-utils");
+const xmr_vendor_1 = require("xmr-core/xmr-vendor");
+const xmr_str_utils_1 = require("xmr-core/xmr-str-utils");
 const constants_1 = require("./constants");
 const hash_ops_1 = require("./hash_ops");
 //curve and scalar functions; split out to make their host functions cleaner and more readable

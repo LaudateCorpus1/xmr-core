@@ -1,35 +1,35 @@
 {
-  "_from": "@xmr-core/biginteger@^0.0.8",
-  "_id": "@xmr-core/biginteger@0.0.8",
+  "_from": "xmr-core/biginteger@^0.0.8",
+  "_id": "xmr-core/biginteger@0.0.8",
   "_inBundle": false,
   "_integrity": "sha512-BF/HxxH8or5lhX/+fCRtU79LnTo/x38x2yYp8XBGrIcii4UwC9mimG0VdwiskR3htKqiEXPPAlZwhAg+Ji72eA==",
-  "_location": "/@xmr-core/biginteger",
+  "_location": "/xmr-core/biginteger",
   "_phantomChildren": {},
   "_requested": {
     "type": "range",
     "registry": true,
-    "raw": "@xmr-core/biginteger@^0.0.8",
-    "name": "@xmr-core/biginteger",
-    "escapedName": "@xmr-core%2fbiginteger",
-    "scope": "@xmr-core",
+    "raw": "xmr-core/biginteger@^0.0.8",
+    "name": "xmr-core/biginteger",
+    "escapedName": "xmr-core%2fbiginteger",
+    "scope": "xmr-core",
     "rawSpec": "^0.0.8",
     "saveSpec": null,
     "fetchSpec": "^0.0.8"
   },
   "_requiredBy": [
-    "/@xmr-core/xmr-b58",
-    "/@xmr-core/xmr-constants",
-    "/@xmr-core/xmr-crypto-utils",
-    "/@xmr-core/xmr-money",
-    "/@xmr-core/xmr-mymonero-libs",
-    "/@xmr-core/xmr-str-utils",
-    "/@xmr-core/xmr-transaction",
-    "/@xmr-core/xmr-varint"
+    "/xmr-core/xmr-b58",
+    "/xmr-core/xmr-constants",
+    "/xmr-core/xmr-crypto-utils",
+    "/xmr-core/xmr-money",
+    "/xmr-core/xmr-mymonero-libs",
+    "/xmr-core/xmr-str-utils",
+    "/xmr-core/xmr-transaction",
+    "/xmr-core/xmr-varint"
   ],
-  "_resolved": "https://registry.npmjs.org/@xmr-core/biginteger/-/biginteger-0.0.8.tgz",
+  "_resolved": "https://registry.npmjs.org/xmr-core/biginteger/-/biginteger-0.0.8.tgz",
   "_shasum": "9c06d7a613d63d0269f0f9ceb6becaffd1adf0f2",
-  "_spec": "@xmr-core/biginteger@^0.0.8",
-  "_where": "D:\\WWW\\dev_monero\\node_modules\\@xmr-core\\xmr-b58",
+  "_spec": "xmr-core/biginteger@^0.0.8",
+  "_where": "D:\\WWW\\dev_monero\\node_modules\\xmr-core\\xmr-b58",
   "author": {
     "name": "HenryNguyen5"
   },
@@ -61,7 +61,7 @@
   ],
   "license": "See LICENSE.TXT. Copyright (c) 2014-2018, MyMonero.com. All rights reserved.",
   "main": "lib/index.js",
-  "name": "@xmr-core/biginteger",
+  "name": "xmr-core/biginteger",
   "publishConfig": {
     "access": "public"
   },

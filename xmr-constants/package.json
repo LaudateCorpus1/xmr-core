@@ -1,29 +1,29 @@
 {
-  "_from": "@xmr-core/xmr-constants@^0.0.8",
-  "_id": "@xmr-core/xmr-constants@0.0.8",
+  "_from": "xmr-core/xmr-constants@^0.0.8",
+  "_id": "xmr-core/xmr-constants@0.0.8",
   "_inBundle": false,
   "_integrity": "sha512-7zBpd6iKb33U2WZPyMHJNPMl293Xs7jR/YhL5QuX8mOM4hy22PFxkQHuum2+/HSQz/+8H2xnDKxREk6jg2w1Jg==",
-  "_location": "/@xmr-core/xmr-constants",
+  "_location": "/xmr-core/xmr-constants",
   "_phantomChildren": {},
   "_requested": {
     "type": "range",
     "registry": true,
-    "raw": "@xmr-core/xmr-constants@^0.0.8",
-    "name": "@xmr-core/xmr-constants",
-    "escapedName": "@xmr-core%2fxmr-constants",
-    "scope": "@xmr-core",
+    "raw": "xmr-core/xmr-constants@^0.0.8",
+    "name": "xmr-core/xmr-constants",
+    "escapedName": "xmr-core%2fxmr-constants",
+    "scope": "xmr-core",
     "rawSpec": "^0.0.8",
     "saveSpec": null,
     "fetchSpec": "^0.0.8"
   },
   "_requiredBy": [
-    "/@xmr-core/xmr-mymonero-libs",
-    "/@xmr-core/xmr-transaction"
+    "/xmr-core/xmr-mymonero-libs",
+    "/xmr-core/xmr-transaction"
   ],
-  "_resolved": "https://registry.npmjs.org/@xmr-core/xmr-constants/-/xmr-constants-0.0.8.tgz",
+  "_resolved": "https://registry.npmjs.org/xmr-core/xmr-constants/-/xmr-constants-0.0.8.tgz",
   "_shasum": "b547fc5c0a1db58076714f6ec99b7731fc3eb030",
-  "_spec": "@xmr-core/xmr-constants@^0.0.8",
-  "_where": "D:\\WWW\\dev_monero\\node_modules\\@xmr-core\\xmr-mymonero-libs",
+  "_spec": "xmr-core/xmr-constants@^0.0.8",
+  "_where": "D:\\WWW\\dev_monero\\node_modules\\xmr-core\\xmr-mymonero-libs",
   "author": {
     "name": "HenryNguyen5"
   },
@@ -32,7 +32,7 @@
   },
   "bundleDependencies": false,
   "dependencies": {
-    "@xmr-core/biginteger": "^0.0.8"
+    "xmr-core/biginteger": "^0.0.8"
   },
   "deprecated": false,
   "description": "Declarations for working with Monero, such as address prefixes, blocktimes, and decimal places",
@@ -58,7 +58,7 @@
   ],
   "license": "See LICENSE.TXT. Copyright (c) 2014-2018, MyMonero.com. All rights reserved.",
   "main": "lib/index.js",
-  "name": "@xmr-core/xmr-constants",
+  "name": "xmr-core/xmr-constants",
   "publishConfig": {
     "access": "public"
   },

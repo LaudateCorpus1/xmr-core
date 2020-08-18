@@ -1,9 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const xmr_varint_1 = require("@xmr-core/xmr-varint");
-const xmr_fast_hash_1 = require("@xmr-core/xmr-fast-hash");
-const xmr_constants_1 = require("@xmr-core/xmr-constants");
-const xmr_b58_1 = require("@xmr-core/xmr-b58");
+const xmr_varint_1 = require("xmr-core/xmr-varint");
+const xmr_fast_hash_1 = require("xmr-core/xmr-fast-hash");
+const xmr_constants_1 = require("xmr-core/xmr-constants");
+const xmr_b58_1 = require("xmr-core/xmr-b58");
 const address_utils_1 = require("../address-utils");
 const primitive_ops_1 = require("../crypto-ops/primitive_ops");
 const rand_1 = require("../rand");

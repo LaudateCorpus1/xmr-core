@@ -1,6 +1,6 @@
-import { encode_varint } from "@xmr-core/xmr-varint";
+import { encode_varint } from "xmr-core/xmr-varint";
 import { serializeTxHeader } from "../utils";
-import { cn_fast_hash } from "@xmr-core/xmr-fast-hash";
+import { cn_fast_hash } from "xmr-core/xmr-fast-hash";
 import { serialize_range_proofs } from "./components/prove_range";
 import { RCTSignatures } from "./types";
 import { SignedTransaction } from "../../types";

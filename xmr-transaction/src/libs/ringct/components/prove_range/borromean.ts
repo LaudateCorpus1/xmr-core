@@ -3,7 +3,7 @@ import {
 	random_scalar,
 	hash_ops,
 	primitive_ops,
-} from "@xmr-core/xmr-crypto-utils";
+} from "xmr-core/xmr-crypto-utils";
 
 const { hash_to_scalar, array_hash_to_scalar } = hash_ops;
 const {

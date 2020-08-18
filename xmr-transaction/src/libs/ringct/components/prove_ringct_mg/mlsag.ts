@@ -2,10 +2,10 @@ import {
 	hash_ops,
 	primitive_ops,
 	random_scalar,
-} from "@xmr-core/xmr-crypto-utils";
+} from "xmr-core/xmr-crypto-utils";
 import { MGSig } from "./types";
-import { HWDevice } from "@xmr-core/xmr-crypto-utils";
-import { JSONPrettyPrint } from "@xmr-core/xmr-str-utils";
+import { HWDevice } from "xmr-core/xmr-crypto-utils";
+import { JSONPrettyPrint } from "xmr-core/xmr-str-utils";
 
 const { array_hash_to_scalar, hashToPoint } = hash_ops;
 const {

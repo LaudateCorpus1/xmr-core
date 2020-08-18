@@ -1,6 +1,6 @@
-# @xmr-core/xmr-b58
+# xmr-core/xmr-b58
 
-@xmr-core/xmr-b58 contains functions to encode and decode base58 strings for monero operations
+xmr-core/xmr-b58 contains functions to encode and decode base58 strings for monero operations
 
 ## Features
 
@@ -14,7 +14,7 @@
 ---
 
 ```ts
-import { encode, decode } from "@xmr-core/xmr-b58";
+import { encode, decode } from "xmr-core/xmr-b58";
 const hexStr = "0x....";
 const b58Str = encode(hexStr);
 ```
@@ -23,10 +23,10 @@ const b58Str = encode(hexStr);
 
 ---
 
-Install @xmr-core/xmr-b58 by running:
+Install xmr-core/xmr-b58 by running:
 
 ```sh
-yarn add @xmr-core/xmr-b58
+yarn add xmr-core/xmr-b58
 ```
 
 ## License

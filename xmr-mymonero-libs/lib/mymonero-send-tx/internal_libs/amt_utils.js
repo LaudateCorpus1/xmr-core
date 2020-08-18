@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var biginteger_1 = require("@xmr-core/biginteger");
+var biginteger_1 = require("xmr-core/biginteger");
 /**
  * @description Gets a starting total amount.
  *

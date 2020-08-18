@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const biginteger_1 = require("@xmr-core/biginteger");
+const biginteger_1 = require("xmr-core/biginteger");
 const coinUnitPlaces = 12;
 exports.config = {
     // Number of atomic units in one unit of currency. e.g. 12 => 10^12 = 1000000000000

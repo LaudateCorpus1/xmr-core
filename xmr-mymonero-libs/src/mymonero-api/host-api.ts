@@ -1,15 +1,15 @@
 import { makeRequest, withUserAgentParams } from "./request-utils";
 import { myMoneroConfig } from "../mymonero-config";
-import { config } from "@xmr-core/xmr-constants";
+import { config } from "xmr-core/xmr-constants";
 import {
 	parseAddressInfo,
 	parseAddressTransactions,
 	parseUnspentOutputs,
 } from "./response-parsers";
-import { BigInt } from "@xmr-core/biginteger";
-import { HWDevice, isRealDevice } from "@xmr-core/xmr-crypto-utils";
-import { JSONPrettyPrint } from "@xmr-core/xmr-str-utils";
-import { Output } from "@xmr-core/xmr-transaction";
+import { BigInt } from "xmr-core/biginteger";
+import { HWDevice, isRealDevice } from "xmr-core/xmr-crypto-utils";
+import { JSONPrettyPrint } from "xmr-core/xmr-str-utils";
+import { Output } from "xmr-core/xmr-transaction";
 
 export class MyMoneroApi {
 	public static async login(address: string, privViewKey: string) {

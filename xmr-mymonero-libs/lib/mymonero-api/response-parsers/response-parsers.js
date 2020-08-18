@@ -35,10 +35,10 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var biginteger_1 = require("@xmr-core/biginteger");
+var biginteger_1 = require("xmr-core/biginteger");
 var memoized_keyimage_generation_1 = require("./memoized-keyimage-generation");
 var utils_1 = require("./utils");
-var xmr_str_utils_1 = require("@xmr-core/xmr-str-utils");
+var xmr_str_utils_1 = require("xmr-core/xmr-str-utils");
 function parseAddressInfo(address, data, privViewKey, pubSpendKey, privSpendKey, hwdev, keyImageCache) {
     if (keyImageCache === void 0) { keyImageCache = memoized_keyimage_generation_1.getKeyImageCache(address); }
     return __awaiter(this, void 0, void 0, function () {

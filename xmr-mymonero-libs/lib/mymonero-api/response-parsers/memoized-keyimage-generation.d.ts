@@ -1,4 +1,4 @@
-import { HWDevice } from "@xmr-core/xmr-crypto-utils";
+import { HWDevice } from "xmr-core/xmr-crypto-utils";
 export declare type KeyImageCache = {
     [cacheIndex: string]: string;
 };

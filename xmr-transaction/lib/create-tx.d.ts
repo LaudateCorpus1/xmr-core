@@ -1,6 +1,6 @@
-import { BigInt } from "@xmr-core/biginteger";
-import { NetType, Keys } from "@xmr-core/xmr-crypto-utils";
-import { HWDevice } from "@xmr-core/xmr-crypto-utils";
+import { BigInt } from "xmr-core/biginteger";
+import { NetType, Keys } from "xmr-core/xmr-crypto-utils";
+import { HWDevice } from "xmr-core/xmr-crypto-utils";
 import { ViewSendKeys, ParsedTarget, Output, AmountOutput, Pid, SignedTransaction } from "./types";
 interface SourceOutput {
     index: string;

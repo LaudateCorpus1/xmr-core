@@ -1,4 +1,4 @@
-import { BigInt } from "@xmr-core/biginteger";
+import { BigInt } from "xmr-core/biginteger";
 import { ParsedTarget } from "./types";
 /**
  *
@@ -7,6 +7,6 @@ import { ParsedTarget } from "./types";
 export declare function parseMoney(str: string): BigInt;
 export declare function decompose_tx_destinations(dsts: ParsedTarget[], rct: boolean): {
     address: string;
-    amount: import("@xmr-core/biginteger/vendor/biginteger").BigInteger;
+    amount: import("xmr-core/biginteger/vendor/biginteger").BigInteger;
 }[];
 //# sourceMappingURL=parsers.d.ts.map

@@ -27,7 +27,7 @@
 // THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 // v--- These should maybe be injected into context
-const JSBigInt = require("@xmr-core/biginteger").BigInt;
+const JSBigInt = require("xmr-core/biginteger").BigInt;
 
 var cnBase58 = (function() {
 	var b58 = {};

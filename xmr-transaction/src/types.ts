@@ -1,4 +1,4 @@
-import { BigInt } from "@xmr-core/biginteger";
+import { BigInt } from "xmr-core/biginteger";
 import { RCTSignatures } from "./";
 
 export interface TransactionInput {

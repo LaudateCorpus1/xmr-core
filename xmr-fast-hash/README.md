@@ -1,4 +1,4 @@
-# @xmr-core/xmr-fast-hash
+# xmr-core/xmr-fast-hash
 
 An implementation of Monero's `cn_fast_hash`
 
@@ -7,7 +7,7 @@ An implementation of Monero's `cn_fast_hash`
 ---
 
 ```sh
-yarn add @xmr-core/xmr-fast-hash
+yarn add xmr-core/xmr-fast-hash
 ```
 
 ## License

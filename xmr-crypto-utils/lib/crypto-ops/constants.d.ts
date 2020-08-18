@@ -12,7 +12,7 @@ export declare const STRUCT_SIZES: {
 export declare const KEY_SIZE = 32;
 export declare const HASH_SIZE = 32;
 export declare const H = "8b655970153799af2aeadc9ff1add0ea6c7251d54154cfa92c173a0dd39c1f94";
-export declare const l: import("@xmr-core/biginteger/vendor/biginteger").BigInteger;
+export declare const l: import("xmr-core/biginteger/vendor/biginteger").BigInteger;
 export declare const I = "0100000000000000000000000000000000000000000000000000000000000000";
 export declare function identity(): string;
 export declare const Z = "0000000000000000000000000000000000000000000000000000000000000000";

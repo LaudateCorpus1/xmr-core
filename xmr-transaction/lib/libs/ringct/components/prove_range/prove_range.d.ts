@@ -1,4 +1,4 @@
-import { BigInt } from "@xmr-core/biginteger";
+import { BigInt } from "xmr-core/biginteger";
 import { RangeSignature } from "./types";
 export declare function proveRange(amount: string | BigInt): {
     C: string;

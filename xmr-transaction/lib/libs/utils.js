@@ -1,9 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const xmr_varint_1 = require("@xmr-core/xmr-varint");
-const xmr_fast_hash_1 = require("@xmr-core/xmr-fast-hash");
-const xmr_str_utils_1 = require("@xmr-core/xmr-str-utils");
-const biginteger_1 = require("@xmr-core/biginteger");
+const xmr_varint_1 = require("xmr-core/xmr-varint");
+const xmr_fast_hash_1 = require("xmr-core/xmr-fast-hash");
+const xmr_str_utils_1 = require("xmr-core/xmr-str-utils");
+const biginteger_1 = require("xmr-core/biginteger");
 const TX_EXTRA_NONCE_MAX_COUNT = 255;
 const TX_EXTRA_TAGS = {
     PADDING: "00",

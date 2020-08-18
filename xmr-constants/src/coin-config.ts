@@ -1,4 +1,4 @@
-import { BigInt } from "@xmr-core/biginteger";
+import { BigInt } from "xmr-core/biginteger";
 
 export interface XMRConfig {
 	readonly coinUnitPlaces: 12;

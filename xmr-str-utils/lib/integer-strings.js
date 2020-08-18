@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const biginteger_1 = require("@xmr-core/biginteger");
+const biginteger_1 = require("xmr-core/biginteger");
 const hex_strings_1 = require("./hex-strings");
 //switch byte order charwise
 function swapEndianC(str) {
