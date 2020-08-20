@@ -1,6 +1,6 @@
-import { constants, random_scalar, hash_ops } from "xmr-core/xmr-crypto-utils";
-import { valid_hex, hextobin, bintohex } from "xmr-core/xmr-str-utils";
-import { CNCrypto } from "xmr-core/xmr-vendor";
+import { constants, random_scalar, hash_ops } from "../../../../xmr-crypto-utils";
+import { valid_hex, hextobin, bintohex } from "../../../../xmr-str-utils";
+import { CNCrypto } from "../../../../xmr-vendor";
 
 const { STRUCT_SIZES, KEY_SIZE, HASH_SIZE } = constants;
 const { hash_to_ec, hash_to_scalar } = hash_ops;

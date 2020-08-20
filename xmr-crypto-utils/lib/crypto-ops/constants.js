@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const biginteger_1 = require("xmr-core/biginteger");
+const biginteger_1 = require("../../../biginteger");
 exports.STRUCT_SIZES = {
     GE_P3: 160,
     GE_P2: 120,

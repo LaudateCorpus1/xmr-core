@@ -1,6 +1,6 @@
-import { ParsedTarget, Pid, ViewSendKeys, Output, AmountOutput } from "xmr-core/xmr-transaction";
-import { BigInt } from "xmr-core/biginteger";
-import { HWDevice, NetType } from "xmr-core/xmr-crypto-utils";
+import { ParsedTarget, Pid, ViewSendKeys, Output, AmountOutput } from "../../../../../xmr-transaction";
+import { BigInt } from "../../../../../biginteger";
+import { HWDevice, NetType } from "../../../../../xmr-crypto-utils";
 export declare type ConstructTxParams = {
     senderPublicKeys: ViewSendKeys;
     senderPrivateKeys: ViewSendKeys;

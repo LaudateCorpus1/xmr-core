@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var errors_1 = require("./errors");
-var xmr_crypto_utils_1 = require("xmr-core/xmr-crypto-utils");
+var xmr_crypto_utils_1 = require("../../../../xmr-crypto-utils");
 /**
  *
  *  @description

@@ -1,5 +1,5 @@
 import moment from "moment";
-import { config } from "xmr-core/xmr-constants";
+import { config } from "../../xmr-constants";
 
 export function isTransactionConfirmed(
 	tx: { height: number },

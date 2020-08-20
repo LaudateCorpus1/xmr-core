@@ -1,4 +1,4 @@
-import { BigInt } from "xmr-core/biginteger";
+import { BigInt } from "../../../../biginteger";
 /**
  * @description Gets a starting total amount.
  *
@@ -14,5 +14,5 @@ import { BigInt } from "xmr-core/biginteger";
  * @param {BigInt} networkFee
  * @returns
  */
-export declare function getBaseTotalAmount(isSweeping: boolean, feelessTotal: BigInt, networkFee: BigInt): import("xmr-core/biginteger/vendor/biginteger").BigInteger;
+export declare function getBaseTotalAmount(isSweeping: boolean, feelessTotal: BigInt, networkFee: BigInt): import("../../../../biginteger/vendor/biginteger").BigInteger;
 //# sourceMappingURL=amt_utils.d.ts.map

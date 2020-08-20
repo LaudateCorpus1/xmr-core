@@ -1,8 +1,8 @@
-import { ParsedTarget, RawTarget } from "xmr-core/xmr-transaction";
+import { ParsedTarget, RawTarget } from "../../../../xmr-transaction";
 import { ERR } from "./errors";
 import { possibleOAAddress } from "./open_alias_lite";
-import { decode_address, NetType } from "xmr-core/xmr-crypto-utils";
-import { parseMoney } from "xmr-core/xmr-money";
+import { decode_address, NetType } from "../../../../xmr-crypto-utils";
+import { parseMoney } from "../../../../xmr-money";
 
 /**
  * @description Map through the provided targets and normalize each address/amount pair

@@ -1,8 +1,8 @@
 import { SignedTransaction } from "../types";
-import { encode_varint } from "xmr-core/xmr-varint";
-import { cn_fast_hash } from "xmr-core/xmr-fast-hash";
-import { valid_hex } from "xmr-core/xmr-str-utils";
-import { BigInt } from "xmr-core/biginteger";
+import { encode_varint } from "../../../xmr-varint";
+import { cn_fast_hash } from "../../../xmr-fast-hash";
+import { valid_hex } from "../../../xmr-str-utils";
+import { BigInt } from "../../../biginteger";
 
 const TX_EXTRA_NONCE_MAX_COUNT = 255;
 

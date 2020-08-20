@@ -4,7 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const moment_1 = __importDefault(require("moment"));
-const xmr_constants_1 = require("xmr-core/xmr-constants");
+const xmr_constants_1 = require("../../xmr-constants");
 function isTransactionConfirmed(tx, blockchainHeight) {
     return blockchainHeight - tx.height > xmr_constants_1.config.txMinConfirms;
 }

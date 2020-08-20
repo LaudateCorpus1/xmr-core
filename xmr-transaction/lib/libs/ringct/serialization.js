@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const xmr_varint_1 = require("xmr-core/xmr-varint");
+const xmr_varint_1 = require("../../../../xmr-varint");
 const utils_1 = require("../utils");
-const xmr_fast_hash_1 = require("xmr-core/xmr-fast-hash");
+const xmr_fast_hash_1 = require("../../../../xmr-fast-hash");
 const prove_range_1 = require("./components/prove_range");
 function serialize_rct_tx_with_hash(tx) {
     if (!tx.rct_signatures) {

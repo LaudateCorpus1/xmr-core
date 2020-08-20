@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const xmr_str_utils_1 = require("xmr-core/xmr-str-utils");
-const xmr_constants_1 = require("xmr-core/xmr-constants");
+const xmr_str_utils_1 = require("../../../xmr-str-utils");
+const xmr_constants_1 = require("../../../xmr-constants");
 function formatMoneyFull(units) {
     let strUnits = units.toString();
     const symbol = strUnits[0] === "-" ? "-" : "";

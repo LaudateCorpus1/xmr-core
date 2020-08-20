@@ -1,9 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const xmr_vendor_1 = require("xmr-core/xmr-vendor");
-const xmr_fast_hash_1 = require("xmr-core/xmr-fast-hash");
+const xmr_vendor_1 = require("../../../xmr-vendor");
+const xmr_fast_hash_1 = require("../../../xmr-fast-hash");
 const constants_1 = require("./constants");
-const xmr_str_utils_1 = require("xmr-core/xmr-str-utils");
+const xmr_str_utils_1 = require("../../../xmr-str-utils");
 const primitive_ops_1 = require("./primitive_ops");
 function hash_to_scalar(buf) {
     const hash = xmr_fast_hash_1.cn_fast_hash(buf);

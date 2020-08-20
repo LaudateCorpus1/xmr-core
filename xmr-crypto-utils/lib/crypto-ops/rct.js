@@ -10,7 +10,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 const primitive_ops_1 = require("./primitive_ops");
 const constants_1 = require("./constants");
-const xmr_str_utils_1 = require("xmr-core/xmr-str-utils");
+const xmr_str_utils_1 = require("../../../xmr-str-utils");
 const hash_ops_1 = require("./hash_ops");
 const derivation_1 = require("./derivation");
 const device_1 = require("../device");

@@ -4,11 +4,11 @@ import {
 	Pid,
 	Output,
 	AmountOutput,
-} from "xmr-core/xmr-transaction";
+} from "../../../../../xmr-transaction";
 import { Status } from "../../status_update_constants";
-import { BigInt } from "xmr-core/biginteger";
+import { BigInt } from "../../../../../biginteger";
 import { MyMoneroApi } from "../../../";
-import { HWDevice, NetType } from "xmr-core/xmr-crypto-utils";
+import { HWDevice, NetType } from "../../../../../xmr-crypto-utils";
 
 export type GetFundTargetsAndFeeParams = {
 	senderAddress: string;

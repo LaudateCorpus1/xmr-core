@@ -4,7 +4,7 @@ import {
 	is_subaddress,
 	isValidOrNoPaymentID,
 	NetType,
-} from "xmr-core/xmr-crypto-utils";
+} from "../../../../xmr-crypto-utils";
 
 /**
  *

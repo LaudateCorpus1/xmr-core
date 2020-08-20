@@ -1,4 +1,4 @@
-import { BigInt } from "xmr-core/biginteger";
+import { BigInt } from "../../biginteger";
 
 export function encode_varint(input: number | string) {
 	let i = new BigInt(input);

@@ -4,9 +4,9 @@ import {
 	ViewSendKeys,
 	Output,
 	AmountOutput,
-} from "xmr-core/xmr-transaction";
-import { BigInt } from "xmr-core/biginteger";
-import { HWDevice, NetType } from "xmr-core/xmr-crypto-utils";
+} from "../../../../../xmr-transaction";
+import { BigInt } from "../../../../../biginteger";
+import { HWDevice, NetType } from "../../../../../xmr-crypto-utils";
 
 export type ConstructTxParams = {
 	senderPublicKeys: ViewSendKeys;

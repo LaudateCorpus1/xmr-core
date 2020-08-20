@@ -6,18 +6,18 @@ import {
 } from "./components/prove_ringct_mg";
 import { RCTSignatures } from "./types";
 import { SecretCommitment, RingMember } from "../../types";
-import { BigInt } from "xmr-core/biginteger";
+import { BigInt } from "../../../../biginteger";
 import {
 	random_scalar,
 	constants,
 	primitive_ops,
 	rctOps,
-} from "xmr-core/xmr-crypto-utils";
-import { d2s, JSONPrettyPrint } from "xmr-core/xmr-str-utils";
+} from "../../../../xmr-crypto-utils";
+import { d2s, JSONPrettyPrint } from "../../../../xmr-str-utils";
 import { get_pre_mlsag_hash } from "./utils";
 import { verBulletProof } from "./components/bullet_proofs";
-import { HWDevice, CtKeyV } from "xmr-core/xmr-crypto-utils";
-import { DefaultDevice } from "xmr-core/xmr-crypto-utils";
+import { HWDevice, CtKeyV } from "../../../../xmr-crypto-utils";
+import { DefaultDevice } from "../../../../xmr-crypto-utils";
 
 const {
 	sc_add,

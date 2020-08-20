@@ -11,8 +11,8 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var biginteger_1 = require("xmr-core/biginteger");
-var xmr_money_1 = require("xmr-core/xmr-money");
+var biginteger_1 = require("../../../../biginteger");
+var xmr_money_1 = require("../../../../xmr-money");
 function isKeyImageEqual(_a, keyImage) {
     var key_image = _a.key_image;
     return key_image === keyImage;

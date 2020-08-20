@@ -1,7 +1,7 @@
-import { encode_varint } from "xmr-core/xmr-varint";
-import { cn_fast_hash } from "xmr-core/xmr-fast-hash";
-import { ADDRESS_CHECKSUM_SIZE } from "xmr-core/xmr-constants";
-import { cnBase58 } from "xmr-core/xmr-b58";
+import { encode_varint } from "../../../xmr-varint";
+import { cn_fast_hash } from "../../../xmr-fast-hash";
+import { ADDRESS_CHECKSUM_SIZE } from "../../../xmr-constants";
+import { cnBase58 } from "../../../xmr-b58";
 import { KeyPair } from "../types";
 import {
 	NetType,

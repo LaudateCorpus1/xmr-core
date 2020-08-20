@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var xmr_constants_1 = require("xmr-core/xmr-constants");
+var xmr_constants_1 = require("../../../xmr-constants");
 var open_alias_lite_1 = require("../mymonero-send-tx/internal_libs/open_alias_lite");
-var xmr_crypto_utils_1 = require("xmr-core/xmr-crypto-utils");
+var xmr_crypto_utils_1 = require("../../../xmr-crypto-utils");
 var URITypes;
 (function (URITypes) {
     URITypes[URITypes["addressAsFirstPathComponent"] = 1] = "addressAsFirstPathComponent";

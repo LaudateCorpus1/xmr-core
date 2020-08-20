@@ -1,12 +1,12 @@
-import { BigInt } from "xmr-core/biginteger";
+import { BigInt } from "../../../../biginteger";
 import {
 	formatMoneyWithSymbol,
 	formatMoneyFullWithSymbol,
 	formatMoney,
 	formatMoneyFull,
 	printDsts,
-} from "xmr-core/xmr-money";
-import { ParsedTarget, Output, SignedTransaction } from "xmr-core/xmr-transaction";
+} from "../../../../xmr-money";
+import { ParsedTarget, Output, SignedTransaction } from "../../../../xmr-transaction";
 
 export namespace Log {
 	export namespace Amount {

@@ -10,11 +10,11 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 const prove_range_1 = require("./components/prove_range");
 const prove_ringct_mg_1 = require("./components/prove_ringct_mg");
-const xmr_crypto_utils_1 = require("xmr-core/xmr-crypto-utils");
-const xmr_str_utils_1 = require("xmr-core/xmr-str-utils");
+const xmr_crypto_utils_1 = require("../../../../xmr-crypto-utils");
+const xmr_str_utils_1 = require("../../../../xmr-str-utils");
 const utils_1 = require("./utils");
 const bullet_proofs_1 = require("./components/bullet_proofs");
-const xmr_crypto_utils_2 = require("xmr-core/xmr-crypto-utils");
+const xmr_crypto_utils_2 = require("../../../../xmr-crypto-utils");
 const { sc_add, sc_sub, ge_add, ge_double_scalarmult_base_vartime, } = xmr_crypto_utils_1.primitive_ops;
 const { commit, scalarmultH } = xmr_crypto_utils_1.rctOps;
 const { I, Z, identity, H } = xmr_crypto_utils_1.constants;

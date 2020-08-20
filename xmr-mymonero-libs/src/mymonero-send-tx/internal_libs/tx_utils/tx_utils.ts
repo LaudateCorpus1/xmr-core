@@ -9,20 +9,20 @@ import { ERR } from "../errors";
 import { Log } from "../logger";
 import { popRandElement } from "../arr_utils";
 import { calculateFee, multiplyFeePriority } from "../fee_utils";
-import { BigInt } from "xmr-core/biginteger";
+import { BigInt } from "../../../../../biginteger";
 import {
 	serialize_rct_tx_with_hash,
 	estimateRctSize,
 	serialize_non_rct_tx,
 	create_transaction,
-} from "xmr-core/xmr-transaction";
-import { cn_fast_hash } from "xmr-core/xmr-fast-hash";
-import { SignedTransaction, ParsedTarget } from "xmr-core/xmr-transaction";
-import { create_address, random_scalar } from "xmr-core/xmr-crypto-utils";
-import { config } from "xmr-core/xmr-constants";
-import { decompose_tx_destinations } from "xmr-core/xmr-money";
-import { isRealDevice } from "xmr-core/xmr-crypto-utils";
-import { JSONPrettyPrint } from "xmr-core/xmr-str-utils";
+} from "../../../../../xmr-transaction";
+import { cn_fast_hash } from "../../../../../xmr-fast-hash";
+import { SignedTransaction, ParsedTarget } from "../../../../../xmr-transaction";
+import { create_address, random_scalar } from "../../../../../xmr-crypto-utils";
+import { config } from "../../../../../xmr-constants";
+import { decompose_tx_destinations } from "../../../../../xmr-money";
+import { isRealDevice } from "../../../../../xmr-crypto-utils";
+import { JSONPrettyPrint } from "../../../../../xmr-str-utils";
 
 // #region totalAmtAndEstFee
 

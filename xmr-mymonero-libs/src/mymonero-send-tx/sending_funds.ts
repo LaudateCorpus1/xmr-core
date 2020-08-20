@@ -15,10 +15,10 @@ import {
 	getRestOfTxData,
 	createTxAndAttemptToSend,
 } from "./internal_libs/construct_tx_and_send";
-import { BigInt } from "xmr-core/biginteger";
-import { estimateRctSize } from "xmr-core/xmr-transaction";
-import { formatMoneyFull } from "xmr-core/xmr-money";
-import { RawTarget, Pid, ViewSendKeys } from "xmr-core/xmr-transaction";
+import { BigInt } from "../../../biginteger";
+import { estimateRctSize } from "../../../xmr-transaction";
+import { formatMoneyFull } from "../../../xmr-money";
+import { RawTarget, Pid, ViewSendKeys } from "../../../xmr-transaction";
 import { MyMoneroApi } from "../";
 import { selectOutputsAndAmountForMixin } from "./internal_libs/output_selection";
 import {
@@ -27,8 +27,8 @@ import {
 	DefaultDevice,
 	NetType,
 	HWDevice,
-} from "xmr-core/xmr-crypto-utils";
-import { JSONPrettyPrint } from "xmr-core/xmr-str-utils";
+} from "../../../xmr-crypto-utils";
+import { JSONPrettyPrint } from "../../../xmr-str-utils";
 
 export function estimatedTransactionNetworkFee(
 	nonZeroMixin: number,

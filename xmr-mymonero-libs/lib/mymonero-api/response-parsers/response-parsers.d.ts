@@ -1,18 +1,18 @@
 import { KeyImageCache } from "./memoized-keyimage-generation";
 import { AddressTransactions, AddressInfo, UnspentOuts, NormalizedTransaction } from "./types";
-import { HWDevice } from "xmr-core/xmr-crypto-utils";
-import { Output } from "xmr-core/xmr-transaction";
+import { HWDevice } from "../../../../xmr-crypto-utils";
+import { Output } from "../../../../xmr-transaction";
 export declare function parseAddressInfo(address: string, data: AddressInfo, privViewKey: string, pubSpendKey: string, privSpendKey: string, hwdev: HWDevice, keyImageCache?: KeyImageCache): Promise<{
-    total_received: import("xmr-core/biginteger/vendor/biginteger").BigInteger;
-    locked_balance: import("xmr-core/biginteger/vendor/biginteger").BigInteger;
-    total_sent: import("xmr-core/biginteger/vendor/biginteger").BigInteger;
-    spent_outputs: import("xmr-core/xmr-mymonero-libs/src/mymonero-api/response-parsers/types").SpentOutput[];
+    total_received: import("../../../../biginteger/vendor/biginteger").BigInteger;
+    locked_balance: import("../../../../biginteger/vendor/biginteger").BigInteger;
+    total_sent: import("../../../../biginteger/vendor/biginteger").BigInteger;
+    spent_outputs: import("../../../../xmr-mymonero-libs/src/mymonero-api/response-parsers/types").SpentOutput[];
     account_scanned_tx_height: number;
     account_scanned_block_height: number;
     account_scan_start_height: number;
     transaction_height: number;
     blockchain_height: number;
-    ratesBySymbol: import("xmr-core/xmr-mymonero-libs/src/mymonero-api/response-parsers/types").Rates;
+    ratesBySymbol: import("../../../../xmr-mymonero-libs/src/mymonero-api/response-parsers/types").Rates;
 }>;
 export declare function parseAddressTransactions(address: string, data: AddressTransactions, privViewKey: string, pubSpendKey: string, privSpendKey: string, hwdev: HWDevice, keyImgCache?: KeyImageCache): Promise<{
     account_scanned_height: number;
@@ -35,6 +35,6 @@ export declare function parseAddressTransactions(address: string, data: AddressT
 export declare function parseUnspentOutputs(address: string, data: UnspentOuts, privViewKey: string, pubSpendKey: string, privSpendKey: string, hwdev: HWDevice, keyImageCache?: KeyImageCache): Promise<{
     unspentOutputs: Output[];
     unusedOuts: Output[];
-    per_kb_fee: import("xmr-core/biginteger/vendor/biginteger").BigInteger;
+    per_kb_fee: import("../../../../biginteger/vendor/biginteger").BigInteger;
 }>;
 //# sourceMappingURL=response-parsers.d.ts.map

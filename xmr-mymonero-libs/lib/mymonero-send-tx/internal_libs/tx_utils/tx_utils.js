@@ -51,14 +51,14 @@ var errors_1 = require("../errors");
 var logger_1 = require("../logger");
 var arr_utils_1 = require("../arr_utils");
 var fee_utils_1 = require("../fee_utils");
-var biginteger_1 = require("xmr-core/biginteger");
-var xmr_transaction_1 = require("xmr-core/xmr-transaction");
-var xmr_fast_hash_1 = require("xmr-core/xmr-fast-hash");
-var xmr_crypto_utils_1 = require("xmr-core/xmr-crypto-utils");
-var xmr_constants_1 = require("xmr-core/xmr-constants");
-var xmr_money_1 = require("xmr-core/xmr-money");
-var xmr_crypto_utils_2 = require("xmr-core/xmr-crypto-utils");
-var xmr_str_utils_1 = require("xmr-core/xmr-str-utils");
+var biginteger_1 = require("../../../../../biginteger");
+var xmr_transaction_1 = require("../../../../../xmr-transaction");
+var xmr_fast_hash_1 = require("../../../../../xmr-fast-hash");
+var xmr_crypto_utils_1 = require("../../../../../xmr-crypto-utils");
+var xmr_constants_1 = require("../../../../../xmr-constants");
+var xmr_money_1 = require("../../../../../xmr-money");
+var xmr_crypto_utils_2 = require("../../../../../xmr-crypto-utils");
+var xmr_str_utils_1 = require("../../../../../xmr-str-utils");
 // #region totalAmtAndEstFee
 /**
  * @description

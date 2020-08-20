@@ -1,7 +1,7 @@
-import { CNCrypto } from "xmr-core/xmr-vendor";
-import { cn_fast_hash } from "xmr-core/xmr-fast-hash";
+import { CNCrypto } from "../../../xmr-vendor";
+import { cn_fast_hash } from "../../../xmr-fast-hash";
 import { STRUCT_SIZES, KEY_SIZE, HASH_SIZE } from "./constants";
-import { bintohex, hextobin } from "xmr-core/xmr-str-utils";
+import { bintohex, hextobin } from "../../../xmr-str-utils";
 import { sc_reduce32 } from "./primitive_ops";
 
 export function hash_to_scalar(buf: string) {

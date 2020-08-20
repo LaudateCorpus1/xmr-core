@@ -1,5 +1,5 @@
-import { BigInt } from "xmr-core/biginteger";
-import { ParsedTarget, Output, SignedTransaction } from "xmr-core/xmr-transaction";
+import { BigInt } from "../../../../biginteger";
+import { ParsedTarget, Output, SignedTransaction } from "../../../../xmr-transaction";
 export declare namespace Log {
     namespace Amount {
         function beforeFee(feelessTotal: BigInt, isSweeping: boolean): void;

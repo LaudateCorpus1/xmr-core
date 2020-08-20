@@ -1,6 +1,6 @@
-import { trimRight, padLeft } from "xmr-core/xmr-str-utils";
-import { BigInt } from "xmr-core/biginteger";
-import { config } from "xmr-core/xmr-constants";
+import { trimRight, padLeft } from "../../xmr-str-utils";
+import { BigInt } from "../../biginteger";
+import { config } from "../../xmr-constants";
 import { ParsedTarget } from "./types";
 
 export function formatMoneyFull(units: BigInt | string) {

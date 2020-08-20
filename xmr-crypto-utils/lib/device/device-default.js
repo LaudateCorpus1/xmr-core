@@ -16,7 +16,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const crypto = __importStar(require("../crypto-ops"));
-const xmr_fast_hash_1 = require("xmr-core/xmr-fast-hash");
+const xmr_fast_hash_1 = require("../../../xmr-fast-hash");
 const key_utils_1 = require("../key-utils");
 const pid_1 = require("../pid");
 class DefaultDevice {

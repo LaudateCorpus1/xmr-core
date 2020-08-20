@@ -8,9 +8,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const xmr_vendor_1 = require("xmr-core/xmr-vendor");
+const xmr_vendor_1 = require("../../../xmr-vendor");
 const constants_1 = require("./constants");
-const xmr_str_utils_1 = require("xmr-core/xmr-str-utils");
+const xmr_str_utils_1 = require("../../../xmr-str-utils");
 const hash_ops_1 = require("./hash_ops");
 function derive_key_image_from_tx(tx_pub, view_sec, spend_pub, spend_sec, output_index, hwdev) {
     return __awaiter(this, void 0, void 0, function* () {

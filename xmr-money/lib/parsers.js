@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const xmr_constants_1 = require("xmr-core/xmr-constants");
-const biginteger_1 = require("xmr-core/biginteger");
+const xmr_constants_1 = require("../../../xmr-constants");
+const biginteger_1 = require("../../../biginteger");
 /**
  *
  * @param {string} str

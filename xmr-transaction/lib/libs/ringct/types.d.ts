@@ -1,6 +1,6 @@
 import { RangeSignature } from "./components/prove_range";
 import { MGSig } from "./components/prove_ringct_mg";
-import { CtKeyV, Commit } from "xmr-core/xmr-crypto-utils";
+import { CtKeyV, Commit } from "../../../../xmr-crypto-utils";
 export interface RCTSignatures {
     type: number;
     message: string;

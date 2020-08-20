@@ -41,7 +41,7 @@ var errors_1 = require("../errors");
 var logger_1 = require("../logger");
 var tx_utils_1 = require("../tx_utils/tx_utils");
 var amt_utils_1 = require("../amt_utils");
-var xmr_str_utils_1 = require("xmr-core/xmr-str-utils");
+var xmr_str_utils_1 = require("../../../../../xmr-str-utils");
 /**
  *
  * @description

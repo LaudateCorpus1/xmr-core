@@ -1,9 +1,9 @@
-import { BigInt } from "xmr-core/biginteger";
-import { rctOps, NetType, Keys, constants } from "xmr-core/xmr-crypto-utils";
-import { d2s, JSONPrettyPrint } from "xmr-core/xmr-str-utils";
-import { INTEGRATED_ID_SIZE } from "xmr-core/xmr-constants";
-import { decode_address, is_subaddress } from "xmr-core/xmr-crypto-utils";
-import { formatMoney, formatMoneyFull } from "xmr-core/xmr-money";
+import { BigInt } from "../../biginteger";
+import { rctOps, NetType, Keys, constants } from "../../xmr-crypto-utils";
+import { d2s, JSONPrettyPrint } from "../../xmr-str-utils";
+import { INTEGRATED_ID_SIZE } from "../../xmr-constants";
+import { decode_address, is_subaddress } from "../../xmr-crypto-utils";
+import { formatMoney, formatMoneyFull } from "../../xmr-money";
 import {
 	get_payment_id_nonce,
 	add_nonce_to_extra,
@@ -13,7 +13,7 @@ import {
 } from "./libs/utils";
 import { generate_ring_signature } from "./libs/non-ringct";
 import { genRct } from "./libs/ringct";
-import { HWDevice, DeviceMode } from "xmr-core/xmr-crypto-utils";
+import { HWDevice, DeviceMode } from "../../xmr-crypto-utils";
 import {
 	ViewSendKeys,
 	ParsedTarget,

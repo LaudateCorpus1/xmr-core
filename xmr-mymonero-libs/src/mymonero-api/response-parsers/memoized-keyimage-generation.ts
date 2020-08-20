@@ -1,4 +1,4 @@
-import { HWDevice, key_image } from "xmr-core/xmr-crypto-utils";
+import { HWDevice, key_image } from "../../../../xmr-crypto-utils";
 const { derive_key_image_from_tx } = key_image;
 
 // Managed caches - Can be used by apps which can't send a mutable_keyImagesByCacheKey

@@ -25,9 +25,9 @@ import { CreateTxAndAttemptToSendParams, GetFundTargetsAndFeeParams } from "./ty
  */
 export declare function getRestOfTxData(params: GetFundTargetsAndFeeParams, outputAndAmountSelector: typeof selectOutputsAndAmountForMixin): Promise<{
     mixOuts: any;
-    fundTargets: import("xmr-core/xmr-transaction/lib/types").ParsedTarget[];
-    newFee: import("xmr-core/biginteger/vendor/biginteger").BigInteger;
-    usingOuts: import("xmr-core/xmr-transaction/lib/types").Output[];
+    fundTargets: import("../../../../../xmr-transaction/lib/types").ParsedTarget[];
+    newFee: import("../../../../../biginteger/vendor/biginteger").BigInteger;
+    usingOuts: import("../../../../../xmr-transaction/lib/types").Output[];
 }>;
 /**
  * @description Creates the transaction blob and attempts to send it.
@@ -46,7 +46,7 @@ export declare function getRestOfTxData(params: GetFundTargetsAndFeeParams, outp
  */
 export declare function createTxAndAttemptToSend(params: CreateTxAndAttemptToSendParams): Promise<{
     success: boolean;
-    txFee: import("xmr-core/biginteger/vendor/biginteger").BigInteger;
+    txFee: import("../../../../../biginteger/vendor/biginteger").BigInteger;
     txHash: string;
 }>;
 //# sourceMappingURL=construct_tx_and_send.d.ts.map

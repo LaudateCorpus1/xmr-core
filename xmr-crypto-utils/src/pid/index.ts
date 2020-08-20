@@ -1,6 +1,6 @@
-import { cn_fast_hash } from "xmr-core/xmr-fast-hash";
-import { INTEGRATED_ID_SIZE } from "xmr-core/xmr-constants";
-import { hex_xor } from "xmr-core/xmr-str-utils";
+import { cn_fast_hash } from "../../../xmr-fast-hash";
+import { INTEGRATED_ID_SIZE } from "../../../xmr-constants";
+import { hex_xor } from "../../../xmr-str-utils";
 import { rand_8 } from "../rand";
 import { generate_key_derivation } from "../crypto-ops/derivation";
 

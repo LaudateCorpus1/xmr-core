@@ -1,4 +1,4 @@
-import { NetType } from "xmr-core/xmr-crypto-utils";
+import { NetType } from "../../../xmr-crypto-utils";
 import { Omit } from "../types";
 export declare enum URITypes {
     addressAsFirstPathComponent = 1,

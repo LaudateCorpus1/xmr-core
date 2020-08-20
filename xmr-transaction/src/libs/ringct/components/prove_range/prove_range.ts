@@ -1,13 +1,13 @@
-import { BigInt } from "xmr-core/biginteger";
+import { BigInt } from "../../../../../../biginteger";
 import { genBorromean, verifyBorromean } from "./borromean";
 import { RangeSignature } from "./types";
 import {
 	primitive_ops,
 	constants,
 	random_scalar,
-} from "xmr-core/xmr-crypto-utils";
+} from "../../../../../../xmr-crypto-utils";
 
-import { d2b } from "xmr-core/xmr-str-utils";
+import { d2b } from "../../../../../../xmr-str-utils";
 
 const {
 	sc_add,

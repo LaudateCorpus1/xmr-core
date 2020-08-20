@@ -21,7 +21,7 @@ import {
 import * as crypto from "../../crypto-ops";
 
 import { KeyPair, Commit } from "../../types";
-import { JSONPrettyPrint } from "xmr-core/xmr-str-utils";
+import { JSONPrettyPrint } from "../../../../xmr-str-utils";
 
 enum RCT {
 	RCTTypeNull = 0x00,

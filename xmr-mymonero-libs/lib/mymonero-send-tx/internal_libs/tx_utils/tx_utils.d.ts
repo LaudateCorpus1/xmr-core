@@ -1,5 +1,5 @@
 import { TotalAmtAndEstFeeParams, ConstructTxParams, ConstructFundTargetsParams } from "./types";
-import { ParsedTarget } from "xmr-core/xmr-transaction";
+import { ParsedTarget } from "../../../../../xmr-transaction";
 /**
  * @description
  * Recalculates the fee and total amount needed for the transaction to be sent. RCT + non sweeping transactions will have their
@@ -11,8 +11,8 @@ import { ParsedTarget } from "xmr-core/xmr-transaction";
  * @returns
  */
 export declare function totalAmtAndEstFee(params: TotalAmtAndEstFeeParams): {
-    newFee: import("xmr-core/biginteger/vendor/biginteger").BigInteger;
-    totalAmount: import("xmr-core/biginteger/vendor/biginteger").BigInteger;
+    newFee: import("../../../../../biginteger/vendor/biginteger").BigInteger;
+    totalAmount: import("../../../../../biginteger/vendor/biginteger").BigInteger;
 };
 /**
  * @description

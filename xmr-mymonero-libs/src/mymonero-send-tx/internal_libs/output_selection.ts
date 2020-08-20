@@ -1,9 +1,9 @@
 import { popRandElement } from "./arr_utils";
 import { Log } from "./logger";
-import { BigInt } from "xmr-core/biginteger";
-import { config } from "xmr-core/xmr-constants";
-import { JSONPrettyPrint } from "xmr-core/xmr-str-utils";
-import { Output } from "xmr-core/xmr-transaction";
+import { BigInt } from "../../../../biginteger";
+import { config } from "../../../../xmr-constants";
+import { JSONPrettyPrint } from "../../../../xmr-str-utils";
+import { Output } from "../../../../xmr-transaction";
 
 export function selectOutputsAndAmountForMixin(
 	targetAmount: BigInt,

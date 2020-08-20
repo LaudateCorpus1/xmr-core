@@ -1,4 +1,4 @@
-import { BigInt } from "xmr-core/biginteger";
+import { BigInt } from "../../biginteger";
 
 export type ParsedTarget = {
 	address: string;

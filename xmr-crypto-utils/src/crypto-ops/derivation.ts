@@ -1,9 +1,9 @@
-import { CNCrypto, nacl } from "xmr-core/xmr-vendor";
+import { CNCrypto, nacl } from "../../../xmr-vendor";
 import { STRUCT_SIZES, KEY_SIZE } from "./constants";
-import { encode_varint } from "xmr-core/xmr-varint";
+import { encode_varint } from "../../../xmr-varint";
 import { hash_to_scalar } from "./hash_ops";
 import { ge_scalarmult, ge_scalarmult_base, ge_sub } from "./primitive_ops";
-import { d2s, hextobin, bintohex } from "xmr-core/xmr-str-utils";
+import { d2s, hextobin, bintohex } from "../../../xmr-str-utils";
 
 export function generate_key_derivation(pub: string, sec: string) {
 	if (pub.length !== 64 || sec.length !== 64) {

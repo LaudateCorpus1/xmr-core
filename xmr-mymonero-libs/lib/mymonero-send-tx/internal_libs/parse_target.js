@@ -2,8 +2,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var errors_1 = require("./errors");
 var open_alias_lite_1 = require("./open_alias_lite");
-var xmr_crypto_utils_1 = require("xmr-core/xmr-crypto-utils");
-var xmr_money_1 = require("xmr-core/xmr-money");
+var xmr_crypto_utils_1 = require("../../../../xmr-crypto-utils");
+var xmr_money_1 = require("../../../../xmr-money");
 /**
  * @description Map through the provided targets and normalize each address/amount pair
  *

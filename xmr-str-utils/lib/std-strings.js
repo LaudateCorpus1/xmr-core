@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const biginteger_1 = require("xmr-core/biginteger");
+const biginteger_1 = require("../../biginteger");
 function trimRight(str, char) {
     while (str[str.length - 1] == char)
         str = str.slice(0, -1);

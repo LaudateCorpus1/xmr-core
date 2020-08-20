@@ -35,10 +35,10 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var biginteger_1 = require("xmr-core/biginteger");
+var biginteger_1 = require("../../../../biginteger");
 var memoized_keyimage_generation_1 = require("./memoized-keyimage-generation");
 var utils_1 = require("./utils");
-var xmr_str_utils_1 = require("xmr-core/xmr-str-utils");
+var xmr_str_utils_1 = require("../../../../xmr-str-utils");
 function parseAddressInfo(address, data, privViewKey, pubSpendKey, privSpendKey, hwdev, keyImageCache) {
     if (keyImageCache === void 0) { keyImageCache = memoized_keyimage_generation_1.getKeyImageCache(address); }
     return __awaiter(this, void 0, void 0, function () {
@@ -86,7 +86,7 @@ exports.parseAddressInfo = parseAddressInfo;
 function parseAddressTransactions(address, data, privViewKey, pubSpendKey, privSpendKey, hwdev, keyImgCache) {
     if (keyImgCache === void 0) { keyImgCache = memoized_keyimage_generation_1.getKeyImageCache(address); }
     return __awaiter(this, void 0, void 0, function () {
-        var _a, blockchain_height, account_scanned_block_height, account_scanned_height, account_scan_start_height, 
+        var _a, blockchain_height, account_scanned_block_height, account_scanned_height, account_scan_start_height,
         /*total_received*/
         transaction_height, transactions, normalizedTransactions, i, transaction, j, keyImage;
         return __generator(this, function (_b) {

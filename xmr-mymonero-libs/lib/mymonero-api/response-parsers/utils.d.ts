@@ -1,5 +1,5 @@
 import { AddressTransactions, AddressTransactionsTx, NormalizedTransaction, SpentOutput, AddressInfo } from "./types";
-import { Output } from "xmr-core/xmr-transaction";
+import { Output } from "../../../../xmr-transaction";
 export declare function isKeyImageEqual({ key_image }: SpentOutput, keyImage: string): boolean;
 export declare function normalizeAddressInfo(data: AddressInfo): Required<AddressInfo>;
 export declare function normalizeAddressTransactions(data: AddressTransactions): Required<AddressTransactions>;
@@ -10,7 +10,7 @@ export declare function normalizeTransaction(tx: AddressTransactionsTx): Normali
  * @param {NormalizedTransaction} { total_received, total_sent}
  */
 export declare function zeroTransactionAmount({ total_received, total_sent, }: NormalizedTransaction): boolean;
-export declare function calculateTransactionAmount({ total_received, total_sent, }: NormalizedTransaction): import("xmr-core/biginteger/vendor/biginteger").BigInteger;
+export declare function calculateTransactionAmount({ total_received, total_sent, }: NormalizedTransaction): import("../../../../biginteger/vendor/biginteger").BigInteger;
 export declare function estimateTransactionAmount({ amount }: NormalizedTransaction): number;
 /**
  *

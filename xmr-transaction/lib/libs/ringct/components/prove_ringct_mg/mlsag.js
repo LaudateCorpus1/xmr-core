@@ -8,8 +8,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const xmr_crypto_utils_1 = require("xmr-core/xmr-crypto-utils");
-const xmr_str_utils_1 = require("xmr-core/xmr-str-utils");
+const xmr_crypto_utils_1 = require("../../../../../../xmr-crypto-utils");
+const xmr_str_utils_1 = require("../../../../../../xmr-str-utils");
 const { array_hash_to_scalar, hashToPoint } = xmr_crypto_utils_1.hash_ops;
 const { ge_scalarmult_base, sc_sub, ge_double_scalarmult_postcomp_vartime, ge_double_scalarmult_base_vartime, } = xmr_crypto_utils_1.primitive_ops;
 // Gen creates a signature which proves that for some column in the keymatrix "pk"

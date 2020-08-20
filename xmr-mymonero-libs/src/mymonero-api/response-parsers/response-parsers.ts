@@ -1,4 +1,4 @@
-import { BigInt } from "xmr-core/biginteger";
+import { BigInt } from "../../../../biginteger";
 import {
 	genKeyImageFromTx,
 	KeyImageCache,
@@ -24,9 +24,9 @@ import {
 	UnspentOuts,
 	NormalizedTransaction,
 } from "./types";
-import { JSONPrettyPrint } from "xmr-core/xmr-str-utils";
-import { HWDevice } from "xmr-core/xmr-crypto-utils";
-import { Output } from "xmr-core/xmr-transaction";
+import { JSONPrettyPrint } from "../../../../xmr-str-utils";
+import { HWDevice } from "../../../../xmr-crypto-utils";
+import { Output } from "../../../../xmr-transaction";
 
 export async function parseAddressInfo(
 	address: string,

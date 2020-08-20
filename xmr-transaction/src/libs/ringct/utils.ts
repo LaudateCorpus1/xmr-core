@@ -1,8 +1,8 @@
 import { serialize_rct_base } from "./serialization";
-import { cn_fast_hash } from "xmr-core/xmr-fast-hash";
+import { cn_fast_hash } from "../../../../xmr-fast-hash";
 import { serialize_range_proofs } from "./components/prove_range";
 import { RCTSignatures } from "./types";
-import { HWDevice, KeyV } from "xmr-core/xmr-crypto-utils";
+import { HWDevice, KeyV } from "../../../../xmr-crypto-utils";
 import { RingMember } from "../../types";
 
 export function get_pre_mlsag_hash(
