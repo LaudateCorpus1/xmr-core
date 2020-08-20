@@ -18,7 +18,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const commands_1 = require("./commands");
 const types_1 = require("../types");
 const crypto = __importStar(require("../../crypto-ops"));
-const xmr_str_utils_1 = require("../../../xmr-str-utils");
+const xmr_str_utils_1 = require("../../../../xmr-str-utils");
 var RCT;
 (function (RCT) {
     RCT[RCT["RCTTypeNull"] = 0] = "RCTTypeNull";
