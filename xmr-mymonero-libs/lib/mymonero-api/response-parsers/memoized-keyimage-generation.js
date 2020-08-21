@@ -35,7 +35,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var xmr_crypto_utils_1 = require("../../../xmr-crypto-utils");
+var xmr_crypto_utils_1 = require("../../../../xmr-crypto-utils");
 var derive_key_image_from_tx = xmr_crypto_utils_1.key_image.derive_key_image_from_tx;
 var keyImagesByWalletId = {};
 /**
