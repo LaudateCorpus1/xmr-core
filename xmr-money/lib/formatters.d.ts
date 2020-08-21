@@ -1,4 +1,4 @@
-import { BigInt } from "../..//biginteger";
+import { BigInt } from "../../biginteger";
 import { ParsedTarget } from "./types";
 export declare function formatMoneyFull(units: BigInt | string): string;
 export declare function formatMoneyFullWithSymbol(units: BigInt | string): string;

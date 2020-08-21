@@ -1,5 +1,4 @@
 "use strict";
-console.log('!!!!')
 Object.defineProperty(exports, "__esModule", { value: true });
 const xmr_fast_hash_1 = require("../../../xmr-fast-hash");
 const xmr_constants_1 = require("../../../xmr-constants");
