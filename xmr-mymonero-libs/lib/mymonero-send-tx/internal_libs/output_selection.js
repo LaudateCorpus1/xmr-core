@@ -4,7 +4,7 @@ var arr_utils_1 = require("./arr_utils");
 var logger_1 = require("./logger");
 var biginteger_1 = require("../../../../biginteger");
 var xmr_constants_1 = require("../../../../xmr-constants");
-var xmr_str_utils_1 = require("../.../../../xmr-str-utils");
+var xmr_str_utils_1 = require("../../../../xmr-str-utils");
 function selectOutputsAndAmountForMixin(targetAmount, unusedOuts, isRingCT, sweeping) {
     xmr_str_utils_1.JSONPrettyPrint("selectOutputsAndAmountForMixin", {
         targetAmount: targetAmount,
