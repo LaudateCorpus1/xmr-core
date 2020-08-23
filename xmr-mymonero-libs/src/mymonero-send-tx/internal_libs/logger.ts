@@ -8,7 +8,7 @@ import {
 } from "../../../../xmr-money";
 import { ParsedTarget, Output, SignedTransaction } from "../../../../xmr-transaction";
 
-export namespace Log {
+export declare namespace Log {
 	export namespace Amount {
 		export function beforeFee(feelessTotal: BigInt, isSweeping: boolean) {
 			const feeless_total = isSweeping

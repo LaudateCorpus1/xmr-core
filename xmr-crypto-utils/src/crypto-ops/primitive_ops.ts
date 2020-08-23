@@ -32,7 +32,7 @@ export function ge_sub(point1: string, point2: string) {
 //adds two scalars together
 export function sc_add(scalar1: string, scalar2: string) {
 	if (scalar1.length !== 64 || scalar2.length !== 64) {
-		throw Error("Invalid input length!");
+		throw Error("Invalid input length 1! " + JSON.stringify(scalar1) + " " + JSON.stringify(scalar2));
 	}
 	const scalar1_m = CNCrypto._malloc(STRUCT_SIZES.EC_SCALAR);
 	const scalar2_m = CNCrypto._malloc(STRUCT_SIZES.EC_SCALAR);
@@ -58,7 +58,7 @@ export function sc_add(scalar1: string, scalar2: string) {
 //subtracts one scalar from another
 export function sc_sub(scalar1: string, scalar2: string) {
 	if (scalar1.length !== 64 || scalar2.length !== 64) {
-		throw Error("Invalid input length!");
+		throw Error("Invalid input length 2! " + JSON.stringify(scalar1) + " " + JSON.stringify(scalar2));
 	}
 	const scalar1_m = CNCrypto._malloc(STRUCT_SIZES.EC_SCALAR);
 	const scalar2_m = CNCrypto._malloc(STRUCT_SIZES.EC_SCALAR);

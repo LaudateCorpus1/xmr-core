@@ -2,7 +2,7 @@ import { BigInt } from "../../../../biginteger";
 import { formatMoney } from "../../../../xmr-money";
 import { config } from "../../../../xmr-constants";
 
-export namespace ERR {
+export declare namespace ERR {
 	export namespace RING {
 		export const INSUFF = Error("Ringsize is below the minimum.");
 	}

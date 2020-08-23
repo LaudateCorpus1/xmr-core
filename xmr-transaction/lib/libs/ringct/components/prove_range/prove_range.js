@@ -11,7 +11,7 @@ const { I, Z, identity, H2 } = xmr_crypto_utils_1.constants;
 //	 and Ci is a commitment to either 0 or s^i, i=0,...,n
 //	 thus this proves that "amount" is in [0, s^n] (we assume s to be 4) (2 for now with v2 txes)
 //	 mask is a such that C = aG + bH, and b = amount
-function proveRange(amount) {
+async function proveRange(amount) {
     let C = I; //identity
     let mask = Z; //zero scalar
     // bitstring representation of amount
@@ -21,7 +21,7 @@ function proveRange(amount) {
     const PM = [[], []];
     //start at index and fill PM left and right -- PM[0] holds Ci
     for (let i = 0; i < 64; i++) {
-        ai[i] = xmr_crypto_utils_1.random_scalar();
+        ai[i] = await xmr_crypto_utils_1.random_scalar();
         if (+indices[i] === 1) {
             // if b[i] === 1
             PM[1][i] = ge_scalarmult_base(ai[i]); //  yG
@@ -40,7 +40,7 @@ function proveRange(amount) {
     }
     const sig = {
         Ci,
-        bsig: borromean_1.genBorromean(ai, PM, indices),
+        bsig: await borromean_1.genBorromean(ai, PM, indices),
     };
     return { C, mask, sig };
 }

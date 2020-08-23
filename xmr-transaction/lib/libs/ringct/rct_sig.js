@@ -31,8 +31,8 @@ const RCTTypeSimple = 2;
 //indices is vector
 //txnFee is string, with its endian not swapped (e.g d2s is not called before passing it in as an argument)
 //to this function
-function genRct(message, inSk, kimgs, destinations, inAmounts, outAmounts, mixRing, amountKeys, indices, txnFee, hwdev) {
-    return __awaiter(this, void 0, void 0, function* () {
+async function genRct(message, inSk, kimgs, destinations, inAmounts, outAmounts, mixRing, amountKeys, indices, txnFee, hwdev) {
+
         xmr_str_utils_1.JSONPrettyPrint("genRct", {
             message,
             inSk,
@@ -76,14 +76,14 @@ function genRct(message, inSk, kimgs, destinations, inAmounts, outAmounts, mixRi
         let i;
         //compute range proofs, etc
         for (i = 0; i < outAmounts.length; i++) {
-            const { C, mask, sig } = prove_range_1.proveRange(outAmounts[i]);
+            const { C, mask, sig } = await prove_range_1.proveRange(outAmounts[i]);
             rv.outPk[i] = { dest: destinations[i], mask: C };
             outSk[i] = { mask, dest: "" };
             rv.p.rangeSigs[i] = sig;
             // the mask is the sum
             sumout = sc_add(sumout, outSk[i].mask);
             // encode the amount commitment for the receiver so that they can retrive blinding factor + amount later
-            rv.ecdhInfo[i] = yield hwdev.ecdhEncode({ mask, amount: xmr_str_utils_1.d2s(outAmounts[i]) }, //blinding factor y and amount b in C = yG + bH
+            rv.ecdhInfo[i] = await hwdev.ecdhEncode({ mask, amount: xmr_str_utils_1.d2s(outAmounts[i]) }, //blinding factor y and amount b in C = yG + bH
             amountKeys[i]);
         }
         //simple
@@ -96,15 +96,15 @@ function genRct(message, inSk, kimgs, destinations, inAmounts, outAmounts, mixRi
             //create pseudoOuts
             for (i = 0; i < inAmounts.length - 1; i++) {
                 // set each blinding factor to be random except for the last
-                ai[i] = xmr_crypto_utils_1.random_scalar();
+                ai[i] = await xmr_crypto_utils_1.random_scalar();
                 sumpouts = sc_add(sumpouts, ai[i]);
                 rv.pseudoOuts[i] = commit(xmr_str_utils_1.d2s(inAmounts[i]), ai[i]);
             }
             ai[i] = sc_sub(sumout, sumpouts);
             rv.pseudoOuts[i] = commit(xmr_str_utils_1.d2s(inAmounts[i]), ai[i]);
-            const pre_mlsag_hash = yield utils_1.get_pre_mlsag_hash(rv, mixRing, hwdev);
+            const pre_mlsag_hash = await utils_1.get_pre_mlsag_hash(rv, mixRing, hwdev);
             for (i = 0; i < inAmounts.length; i++) {
-                rv.p.MGs.push(yield prove_ringct_mg_1.proveRctMG(pre_mlsag_hash, mixRing[i], inSk[i], kimgs[i], ai[i], rv.pseudoOuts[i], indices[i], hwdev));
+                rv.p.MGs.push(await prove_ringct_mg_1.proveRctMG(pre_mlsag_hash, mixRing[i], inSk[i], kimgs[i], ai[i], rv.pseudoOuts[i], indices[i], hwdev));
             }
         }
         else {
@@ -115,19 +115,18 @@ function genRct(message, inSk, kimgs, destinations, inAmounts, outAmounts, mixRi
             }
             const txnfeeKey = scalarmultH(xmr_str_utils_1.d2s(rv.txnFee));
             sumC = ge_add(sumC, txnfeeKey);
-            const pre_mlsag_hash = yield utils_1.get_pre_mlsag_hash(rv, mixRing, hwdev);
+            const pre_mlsag_hash = await utils_1.get_pre_mlsag_hash(rv, mixRing, hwdev);
             xmr_str_utils_1.JSONPrettyPrint("genRct", {
                 txnfeeKey,
                 sumC,
                 pre_mlsag_hash,
             }, "RCTTypeFull, pre rv.p.MGs.push");
-            rv.p.MGs.push(yield prove_ringct_mg_1.proveRctMG(pre_mlsag_hash, mixRing[0], inSk[0], kimgs[0], sumout, sumC, indices[0], hwdev));
+            rv.p.MGs.push(await prove_ringct_mg_1.proveRctMG(pre_mlsag_hash, mixRing[0], inSk[0], kimgs[0], sumout, sumC, indices[0], hwdev));
         }
         xmr_str_utils_1.JSONPrettyPrint("genRct", {
             rv,
         }, "ret");
         return rv;
-    });
 }
 exports.genRct = genRct;
 const defaultHwDev = new xmr_crypto_utils_2.DefaultDevice();

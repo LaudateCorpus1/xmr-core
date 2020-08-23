@@ -9,7 +9,7 @@ const { ge_scalarmult_base, sc_mulsub, ge_double_scalarmult_base_vartime, } = xm
 //size: ring size, default 2
 //nrings: number of rings, default 64
 //extensible borromean signatures
-function genBorromean(xv, pm, iv) {
+async function genBorromean(xv, pm, iv) {
     if (xv.length !== 64) {
         throw Error("wrong xv length " + xv.length);
     }
@@ -43,10 +43,10 @@ function genBorromean(xv, pm, iv) {
     const alpha = [];
     for (let i = 0; i < 64; i++) {
         index = parseInt(iv[i]);
-        alpha[i] = xmr_crypto_utils_1.random_scalar();
+        alpha[i] = await xmr_crypto_utils_1.random_scalar();
         L[index][i] = ge_scalarmult_base(alpha[i]);
         if (index === 0) {
-            bb.s[1][i] = xmr_crypto_utils_1.random_scalar();
+            bb.s[1][i] = await xmr_crypto_utils_1.random_scalar();
             const c = hash_to_scalar(L[index][i]);
             L[1][i] = ge_double_scalarmult_base_vartime(c, pm[1][i], bb.s[1][i]);
         }
@@ -61,7 +61,7 @@ function genBorromean(xv, pm, iv) {
     for (let i = 0; i < 64; i++) {
         let cc = bb.ee;
         if (+iv[i] === 1) {
-            bb.s[0][i] = xmr_crypto_utils_1.random_scalar();
+            bb.s[0][i] = await xmr_crypto_utils_1.random_scalar();
             const LL = ge_double_scalarmult_base_vartime(cc, pm[0][i], bb.s[0][i]);
             cc = hash_to_scalar(LL);
             bb.s[1][i] = sc_mulsub(xv[i], cc, alpha[i]);

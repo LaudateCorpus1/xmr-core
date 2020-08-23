@@ -19,7 +19,7 @@ const {
 //nrings: number of rings, default 64
 //extensible borromean signatures
 
-export function genBorromean(
+export async function genBorromean(
 	xv: string[],
 	pm: string[][],
 	iv: string[] | string,
@@ -59,10 +59,10 @@ export function genBorromean(
 	const alpha = [];
 	for (let i = 0; i < 64; i++) {
 		index = parseInt(iv[i]);
-		alpha[i] = random_scalar();
+		alpha[i] = await random_scalar();
 		L[index][i] = ge_scalarmult_base(alpha[i]);
 		if (index === 0) {
-			bb.s[1][i] = random_scalar();
+			bb.s[1][i] = await random_scalar();
 			const c = hash_to_scalar(L[index][i]);
 			L[1][i] = ge_double_scalarmult_base_vartime(
 				c,
@@ -83,7 +83,7 @@ export function genBorromean(
 	for (let i = 0; i < 64; i++) {
 		let cc = bb.ee;
 		if (+iv[i] === 1) {
-			bb.s[0][i] = random_scalar();
+			bb.s[0][i] = await random_scalar();
 			const LL = ge_double_scalarmult_base_vartime(
 				cc,
 				pm[0][i],

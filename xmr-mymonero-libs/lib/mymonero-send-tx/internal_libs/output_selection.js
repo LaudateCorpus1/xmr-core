@@ -12,7 +12,7 @@ function selectOutputsAndAmountForMixin(targetAmount, unusedOuts, isRingCT, swee
         isRingCT: isRingCT,
         sweeping: sweeping,
     }, "args");
-    logger_1.Log.SelectOutsAndAmtForMix.target(targetAmount);
+    // // logger_1.Log.SelectOutsAndAmtForMix.target(targetAmount);
     var usingOutsAmount = new biginteger_1.BigInt(0);
     var usingOuts = [];
     var remainingUnusedOuts = unusedOuts.slice(); // take copy so as to prevent issue if we must re-enter tx building fn if fee too low after building
@@ -27,20 +27,20 @@ function selectOutputsAndAmountForMixin(targetAmount, unusedOuts, isRingCT, swee
         if (outAmount.compare(xmr_constants_1.config.dustThreshold) < 0) {
             // amount is dusty..
             if (!sweeping) {
-                logger_1.Log.SelectOutsAndAmtForMix.Dusty.notSweeping();
+                // logger_1.Log.SelectOutsAndAmtForMix.Dusty.notSweeping();
                 continue;
             }
             if (!out.rct) {
-                logger_1.Log.SelectOutsAndAmtForMix.Dusty.rct();
+                // logger_1.Log.SelectOutsAndAmtForMix.Dusty.rct();
                 continue;
             }
             else {
-                logger_1.Log.SelectOutsAndAmtForMix.Dusty.nonRct();
+                // logger_1.Log.SelectOutsAndAmtForMix.Dusty.nonRct();
             }
         }
         usingOuts.push(out);
         usingOutsAmount = usingOutsAmount.add(outAmount);
-        logger_1.Log.SelectOutsAndAmtForMix.usingOut(outAmount, out);
+        // logger_1.Log.SelectOutsAndAmtForMix.usingOut(outAmount, out);
     }
     xmr_str_utils_1.JSONPrettyPrint("selectOutputsAndAmountForMixin", {
         usingOuts: usingOuts,

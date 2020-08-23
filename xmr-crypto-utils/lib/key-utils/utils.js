@@ -21,7 +21,7 @@ exports.pubkeys_to_string = pubkeys_to_string;
 // Generate keypair from seed
 function generate_keys(seed) {
     if (seed.length !== 64)
-        throw Error("Invalid input length!");
+        throw Error("Invalid input length! " + JSON.stringify(seed) + " " + seed.length);
     const sec = primitive_ops_1.sc_reduce32(seed);
     const pub = secret_key_to_public_key(sec);
     return {
@@ -36,8 +36,8 @@ function verify_keys(view_pub, view_sec, spend_pub, spend_sec) {
     return expected_spend_pub === spend_pub && expected_view_pub === view_pub;
 }
 exports.verify_keys = verify_keys;
-function random_keypair() {
-    return generate_keys(rand_1.rand_32());
+async function random_keypair() {
+    return generate_keys(await rand_1.rand_32());
 }
 exports.random_keypair = random_keypair;
 // alias

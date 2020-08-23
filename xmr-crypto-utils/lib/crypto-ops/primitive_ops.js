@@ -30,7 +30,7 @@ exports.ge_sub = ge_sub;
 //adds two scalars together
 function sc_add(scalar1, scalar2) {
     if (scalar1.length !== 64 || scalar2.length !== 64) {
-        throw Error("Invalid input length!");
+        throw Error("Invalid input length 11! " + JSON.stringify(scalar1) + " " + JSON.stringify(scalar2));
     }
     const scalar1_m = xmr_vendor_1.CNCrypto._malloc(constants_1.STRUCT_SIZES.EC_SCALAR);
     const scalar2_m = xmr_vendor_1.CNCrypto._malloc(constants_1.STRUCT_SIZES.EC_SCALAR);
@@ -48,7 +48,7 @@ exports.sc_add = sc_add;
 //subtracts one scalar from another
 function sc_sub(scalar1, scalar2) {
     if (scalar1.length !== 64 || scalar2.length !== 64) {
-        throw Error("Invalid input length!");
+        throw Error("Invalid input length 12! " + JSON.stringify(scalar1) + " " + JSON.stringify(scalar2));
     }
     const scalar1_m = xmr_vendor_1.CNCrypto._malloc(constants_1.STRUCT_SIZES.EC_SCALAR);
     const scalar2_m = xmr_vendor_1.CNCrypto._malloc(constants_1.STRUCT_SIZES.EC_SCALAR);
@@ -109,7 +109,7 @@ function ge_double_scalarmult_postcomp_vartime(r, P, c, I) {
 exports.ge_double_scalarmult_postcomp_vartime = ge_double_scalarmult_postcomp_vartime;
 function ge_scalarmult_base(sec) {
     if (sec.length !== 64) {
-        throw Error("Invalid sec length");
+        throw Error("Invalid sec length " + JSON.stringify(sec));
     }
     return xmr_str_utils_1.bintohex(xmr_vendor_1.nacl.ge_scalarmult_base(xmr_str_utils_1.hextobin(sec)));
 }

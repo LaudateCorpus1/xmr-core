@@ -76,7 +76,7 @@ function getRestOfTxData(params, outputAndAmountSelector) {
                     // Now we need to establish some values for balance validation and to construct the transaction
                     updateStatus(status_update_constants_1.sendFundStatus.calculatingFee);
                     baseTotalAmount = amt_utils_1.getBaseTotalAmount(isSweeping, feelessTotal, networkFee);
-                    logger_1.Log.Balance.requiredBase(baseTotalAmount, isSweeping);
+                    // logger_1.Log.Balance.requiredBase(baseTotalAmount, isSweeping);
                     _a = outputAndAmountSelector(baseTotalAmount, unusedOuts, isRingCT, isSweeping), remainingUnusedOuts = _a.remainingUnusedOuts, usingOuts = _a.usingOuts, usingOutsAmount = _a.usingOutsAmount;
                     _b = tx_utils_1.totalAmtAndEstFee({
                         baseTotalAmount: baseTotalAmount,
@@ -91,7 +91,7 @@ function getRestOfTxData(params, outputAndAmountSelector) {
                         usingOuts: usingOuts,
                         usingOutsAmount: usingOutsAmount,
                     }), newFee = _b.newFee, totalAmount = _b.totalAmount;
-                    logger_1.Log.Balance.requiredPostRct(totalAmount);
+                    // logger_1.Log.Balance.requiredPostRct(totalAmount);
                     fundTargets = tx_utils_1.validateAndConstructFundTargets({
                         senderAddress: senderAddress,
                         targetAddress: targetAddress,
@@ -102,7 +102,7 @@ function getRestOfTxData(params, outputAndAmountSelector) {
                         isSweeping: isSweeping,
                         nettype: nettype,
                     }).fundTargets;
-                    logger_1.Log.Target.display(fundTargets);
+                    // logger_1.Log.Target.display(fundTargets);
                     // check for invalid mixin level
                     if (mixin < 0 || isNaN(mixin)) {
                         throw errors_1.ERR.MIXIN.INVAL;
@@ -152,11 +152,11 @@ function createTxAndAttemptToSend(params) {
                     txFee = fee_utils_1.calculateFeeKb(feePerKB, numOfKB, fee_utils_1.multiplyFeePriority(simplePriority));
                     // if we need a higher fee
                     if (txFee.compare(networkFee) > 0) {
-                        logger_1.Log.Fee.estLowerThanReal(networkFee, txFee);
+                        // logger_1.Log.Fee.estLowerThanReal(networkFee, txFee);
                         return [2 /*return*/, { success: false, txFee: txFee, txHash: txHash }];
                     }
                     // generated with correct per-kb fee
-                    logger_1.Log.Fee.successfulTx(networkFee);
+                    // logger_1.Log.Fee.successfulTx(networkFee);
                     updateStatus(status_update_constants_1.sendFundStatus.submittingTransaction);
                     xmr_str_utils_1.JSONPrettyPrint("createTxAndAttemptToSend", {
                         senderAddress: senderAddress,

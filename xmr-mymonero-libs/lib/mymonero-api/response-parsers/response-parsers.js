@@ -194,9 +194,8 @@ function parseUnspentOutputs(address, data, privViewKey, pubSpendKey, privSpendK
                                             spend_key_image = spend_key_images_1[_i];
                                             if (spend_key_image === computedKeyImage) {
                                                 return [2 /*return*/, resolvedUnspent];
-                                            }
-                                            else {
-                                                console.log("\uD83D\uDCAC  Output used as mixin (" + computedKeyImage + " / " + spend_key_image + ")");
+                                            } else {
+                                                // console.log("\uD83D\uDCAC  Output used as mixin (" + computedKeyImage + " / " + spend_key_image + ")");
                                             }
                                         }
                                         return [2 /*return*/, resolvedUnspent.concat([currOutput])];
@@ -205,7 +204,7 @@ function parseUnspentOutputs(address, data, privViewKey, pubSpendKey, privSpendK
                         }); }, Promise.resolve([]))];
                 case 1:
                     unspentOutputs = _a.sent();
-                    console.log("Unspent outs: " + JSON.stringify(unspentOutputs));
+                    // console.log("Unspent outs: " + JSON.stringify(unspentOutputs));
                     xmr_str_utils_1.JSONPrettyPrint("parseUnspentOutputs", {
                         unspentOutputs: unspentOutputs,
                         unusedOuts: unspentOutputs.slice(),

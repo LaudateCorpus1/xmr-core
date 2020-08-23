@@ -227,7 +227,7 @@ export class DefaultDevice implements HWDevice {
 	// #region TRANSACTION
 
 	public async open_tx(): Promise<SecretKey> {
-		const { sec } = random_keypair();
+		const { sec } = await random_keypair();
 		return sec;
 	}
 

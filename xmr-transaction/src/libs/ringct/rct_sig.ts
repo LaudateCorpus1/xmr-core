@@ -107,7 +107,7 @@ export async function genRct(
 	let i;
 	//compute range proofs, etc
 	for (i = 0; i < outAmounts.length; i++) {
-		const { C, mask, sig } = proveRange(outAmounts[i]);
+		const { C, mask, sig } = await proveRange(outAmounts[i]);
 		rv.outPk[i] = { dest: destinations[i], mask: C };
 		outSk[i] = { mask, dest: "" };
 		rv.p.rangeSigs[i] = sig;
@@ -133,7 +133,7 @@ export async function genRct(
 		//create pseudoOuts
 		for (i = 0; i < inAmounts.length - 1; i++) {
 			// set each blinding factor to be random except for the last
-			ai[i] = random_scalar();
+			ai[i] = await random_scalar();
 			sumpouts = sc_add(sumpouts, ai[i]);
 			rv.pseudoOuts[i] = commit(d2s(inAmounts[i]), ai[i]);
 		}

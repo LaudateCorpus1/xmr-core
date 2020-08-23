@@ -77,7 +77,7 @@ function totalAmtAndEstFee(params) {
     }
     /* if (usingOuts.length > 1 && isRingCT )*/
     var _a = estRctFeeAndAmt(params), newFee = _a.newFee, totalAmount = _a.totalAmount;
-    logger_1.Log.Fee.basedOnInputs(newFee, usingOuts);
+    // // logger_1.Log.Fee.basedOnInputs(newFee, usingOuts);
     return { newFee: newFee, totalAmount: totalAmount };
 }
 exports.totalAmtAndEstFee = totalAmtAndEstFee;
@@ -128,7 +128,7 @@ function estRctNonSwpAmt(params, fee) {
     while (usingOutsAmount.compare(currTotalAmount) < 0 &&
         remainingUnusedOuts.length > 0) {
         var out = arr_utils_1.popRandElement(remainingUnusedOuts);
-        logger_1.Log.Output.display(out);
+        // logger_1.Log.Output.display(out);
         // and recalculate invalidated values
         newFee = fee_utils_1.calculateFee(feePerKB, xmr_transaction_1.estimateRctSize(usingOuts.length, mixin, 2), fee_utils_1.multiplyFeePriority(simplePriority));
         currTotalAmount = feelessTotal.add(newFee);
@@ -187,10 +187,10 @@ function validateAndConstructFundTargets(params) {
         }
         // where the change amount is whats left after sending to other addresses + fee
         var changeAmount = usingOutsAmount.subtract(totalAmount);
-        logger_1.Log.Amount.change(changeAmount);
+        // logger_1.Log.Amount.change(changeAmount);
         if (isRingCT) {
             // for RCT we don't presently care about dustiness so add entire change amount
-            logger_1.Log.Amount.toSelf(changeAmount, senderAddress);
+            // logger_1.Log.Amount.toSelf(changeAmount, senderAddress);
             fundTargets.push({
                 address: senderAddress,
                 amount: changeAmount,
@@ -200,15 +200,15 @@ function validateAndConstructFundTargets(params) {
             // pre-ringct
             // do not give ourselves change < dust threshold
             var _a = changeAmount.divRem(xmr_constants_1.config.dustThreshold), quotient = _a[0], remainder = _a[1];
-            logger_1.Log.Amount.changeAmountDivRem([quotient, remainder]);
+            // logger_1.Log.Amount.changeAmountDivRem([quotient, remainder]);
             if (!remainder.isZero()) {
                 // miners will add dusty change to fee
-                logger_1.Log.Fee.belowDustThreshold(remainder);
+                // logger_1.Log.Fee.belowDustThreshold(remainder);
             }
             if (!quotient.isZero()) {
                 // send non-dusty change to our address
                 var usableChange = quotient.multiply(xmr_constants_1.config.dustThreshold);
-                logger_1.Log.Amount.toSelf(usableChange, senderAddress);
+                // logger_1.Log.Amount.toSelf(usableChange, senderAddress);
                 fundTargets.push({
                     address: senderAddress,
                     amount: usableChange,
@@ -225,7 +225,7 @@ function validateAndConstructFundTargets(params) {
             // so we dont create 1 output (outlier)
             var fakeAddress = xmr_crypto_utils_1.create_address(xmr_crypto_utils_1.random_scalar(), nettype)
                 .public_addr;
-            logger_1.Log.Output.uniformity(fakeAddress);
+            // logger_1.Log.Output.uniformity(fakeAddress);
             fundTargets.push({
                 address: fakeAddress,
                 amount: biginteger_1.BigInt.ZERO,
@@ -264,10 +264,10 @@ function makeSignedTx(params) {
                 case 0:
                     _f.trys.push([0, 5, , 6]);
                     senderPublicKeys = params.senderPublicKeys, senderPrivateKeys = params.senderPrivateKeys, targetAddress = params.targetAddress, fundTargets = params.fundTargets, pid = params.pid, encryptPid = params.encryptPid, mixOuts = params.mixOuts, mixin = params.mixin, usingOuts = params.usingOuts, networkFee = params.networkFee, isRingCT = params.isRingCT, nettype = params.nettype, hwdev = params.hwdev;
-                    logger_1.Log.Target.fullDisplay(fundTargets);
+                    // logger_1.Log.Target.fullDisplay(fundTargets);
                     targetViewKey = key_utils_1.getTargetPubViewKey(encryptPid, targetAddress, nettype);
                     splitDestinations = xmr_money_1.decompose_tx_destinations(fundTargets, isRingCT);
-                    logger_1.Log.Target.displayDecomposed(splitDestinations);
+                    // logger_1.Log.Target.displayDecomposed(splitDestinations);
                     _a = xmr_transaction_1.create_transaction;
                     _b = [senderPublicKeys];
                     _c = [{}, senderPrivateKeys];
@@ -294,11 +294,11 @@ function makeSignedTx(params) {
                         hwdev]))];
                 case 4:
                     signedTx = _f.sent();
-                    logger_1.Log.Transaction.signed(signedTx);
+                    // logger_1.Log.Transaction.signed(signedTx);
                     return [2 /*return*/, { signedTx: signedTx }];
                 case 5:
                     e_1 = _f.sent();
-                    throw errors_1.ERR.TX.failure(e_1);
+                    throw new Error(e_1);
                 case 6: return [2 /*return*/];
             }
         });
@@ -313,7 +313,7 @@ function getSerializedTxAndHash(signedTx) {
             serializedSignedTx: serializedSignedTx,
             txHash: txHash,
         };
-        logger_1.Log.Transaction.serializedAndHash(serializedSignedTx, txHash);
+        // logger_1.Log.Transaction.serializedAndHash(serializedSignedTx, txHash);
         return ret;
     }
     // rct
@@ -323,7 +323,7 @@ function getSerializedTxAndHash(signedTx) {
             serializedSignedTx: raw,
             txHash: hash,
         };
-        logger_1.Log.Transaction.serializedAndHash(raw, hash);
+        // logger_1.Log.Transaction.serializedAndHash(raw, hash);
         return ret;
     }
 }
@@ -334,7 +334,7 @@ function getTxSize(serializedSignedTx, estMinNetworkFee) {
     if (txBlobBytes % 1024) {
         numOfKB++;
     }
-    logger_1.Log.Fee.txKB(txBlobBytes, numOfKB, estMinNetworkFee);
+    // logger_1.Log.Fee.txKB(txBlobBytes, numOfKB, estMinNetworkFee);
     return { numOfKB: numOfKB };
 }
 // #endregion constructTx

@@ -22,7 +22,7 @@ export function selectOutputsAndAmountForMixin(
 		"args",
 	);
 
-	Log.SelectOutsAndAmtForMix.target(targetAmount);
+	// // Log.SelectOutsAndAmtForMix.target(targetAmount);
 
 	let usingOutsAmount = new BigInt(0);
 	const usingOuts: Output[] = [];
@@ -40,20 +40,20 @@ export function selectOutputsAndAmountForMixin(
 		if (outAmount.compare(config.dustThreshold) < 0) {
 			// amount is dusty..
 			if (!sweeping) {
-				Log.SelectOutsAndAmtForMix.Dusty.notSweeping();
+				// Log.SelectOutsAndAmtForMix.Dusty.notSweeping();
 				continue;
 			}
 			if (!out.rct) {
-				Log.SelectOutsAndAmtForMix.Dusty.rct();
+				// Log.SelectOutsAndAmtForMix.Dusty.rct();
 				continue;
 			} else {
-				Log.SelectOutsAndAmtForMix.Dusty.nonRct();
+				// Log.SelectOutsAndAmtForMix.Dusty.nonRct();
 			}
 		}
 		usingOuts.push(out);
 		usingOutsAmount = usingOutsAmount.add(outAmount);
 
-		Log.SelectOutsAndAmtForMix.usingOut(outAmount, out);
+		// Log.SelectOutsAndAmtForMix.usingOut(outAmount, out);
 	}
 
 	JSONPrettyPrint(

@@ -226,9 +226,9 @@ export async function parseUnspentOutputs(
 				if (spend_key_image === computedKeyImage) {
 					return resolvedUnspent;
 				} else {
-					console.log(
-						`💬  Output used as mixin (${computedKeyImage} / ${spend_key_image})`,
-					);
+					// console.log(
+					// 	`💬  Output used as mixin (${computedKeyImage} / ${spend_key_image})`,
+					// );
 				}
 			}
 
@@ -237,7 +237,7 @@ export async function parseUnspentOutputs(
 		Promise.resolve([]) as Promise<Output[]>,
 	);
 
-	console.log("Unspent outs: " + JSON.stringify(unspentOutputs));
+	// console.log("Unspent outs: " + JSON.stringify(unspentOutputs));
 
 	JSONPrettyPrint(
 		"parseUnspentOutputs",

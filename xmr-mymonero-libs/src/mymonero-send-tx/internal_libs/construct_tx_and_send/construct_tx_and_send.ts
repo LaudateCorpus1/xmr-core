@@ -73,7 +73,7 @@ export async function getRestOfTxData(
 		networkFee,
 	);
 
-	Log.Balance.requiredBase(baseTotalAmount, isSweeping);
+	// Log.Balance.requiredBase(baseTotalAmount, isSweeping);
 
 	const {
 		remainingUnusedOuts, // this is a copy of the pre-mutation usingOuts
@@ -101,7 +101,7 @@ export async function getRestOfTxData(
 		usingOuts,
 		usingOutsAmount,
 	});
-	Log.Balance.requiredPostRct(totalAmount);
+	// Log.Balance.requiredPostRct(totalAmount);
 
 	const { fundTargets } = validateAndConstructFundTargets({
 		senderAddress,
@@ -115,7 +115,7 @@ export async function getRestOfTxData(
 		isSweeping,
 		nettype,
 	});
-	Log.Target.display(fundTargets);
+	// Log.Target.display(fundTargets);
 
 	// check for invalid mixin level
 	if (mixin < 0 || isNaN(mixin)) {
@@ -193,12 +193,12 @@ export async function createTxAndAttemptToSend(
 	);
 	// if we need a higher fee
 	if (txFee.compare(networkFee) > 0) {
-		Log.Fee.estLowerThanReal(networkFee, txFee);
+		// Log.Fee.estLowerThanReal(networkFee, txFee);
 		return { success: false, txFee, txHash };
 	}
 
 	// generated with correct per-kb fee
-	Log.Fee.successfulTx(networkFee);
+	// Log.Fee.successfulTx(networkFee);
 	updateStatus(sendFundStatus.submittingTransaction);
 
 	JSONPrettyPrint(

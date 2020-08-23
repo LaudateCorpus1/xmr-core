@@ -87,7 +87,7 @@ export async function MLSAG_Gen(
 	toHash[3] = aHP; //dsRow R (key image check)
 
 	//secret index (commitment section) / nds rows
-	alpha[1] = random_scalar();
+	alpha[1] = await random_scalar();
 	toHash[4] = pk[index][1]; //secret index commitment
 	toHash[5] = ge_scalarmult_base(alpha[1]); //ndsRow L
 
@@ -103,8 +103,8 @@ export async function MLSAG_Gen(
 		rv.cc = c_old;
 	}
 	while (i != index) {
-		rv.ss[i][0] = random_scalar(); //dsRow ss
-		rv.ss[i][1] = random_scalar(); //ndsRow ss
+		rv.ss[i][0] = await random_scalar(); //dsRow ss
+		rv.ss[i][1] = await random_scalar(); //ndsRow ss
 
 		//!secret index (pubkey section)
 		toHash[1] = pk[i][0];

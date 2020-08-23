@@ -18,7 +18,7 @@ export function is_subaddress(addr: string, nettype: NetType) {
 	return prefix === subaddressPrefix;
 }
 
-export function create_address(seed: string, nettype: NetType): Account {
+export async function create_address(seed: string, nettype: NetType): Account {
 	// updated by Luigi and PS to support reduced and non-reduced seeds
 	let first;
 	if (seed.length !== 64) {
@@ -26,9 +26,9 @@ export function create_address(seed: string, nettype: NetType): Account {
 	} else {
 		first = sc_reduce32(seed);
 	}
-	const spend = generate_keys(first);
+	const spend = await generate_keys(first);
 	const second = cn_fast_hash(first);
-	const view = generate_keys(second);
+	const view = await generate_keys(second);
 	const public_addr = pubkeys_to_string(spend.pub, view.pub, nettype);
 	return { spend, view, public_addr };
 }

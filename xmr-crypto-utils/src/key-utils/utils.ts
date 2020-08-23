@@ -29,7 +29,7 @@ export function pubkeys_to_string(
 
 // Generate keypair from seed
 export function generate_keys(seed: string): KeyPair {
-	if (seed.length !== 64) throw Error("Invalid input length!");
+	if (seed.length !== 64) throw Error("Invalid input length! " + JSON.stringify(seed) + " " + seed.length);
 	const sec = sc_reduce32(seed);
 	const pub = secret_key_to_public_key(sec);
 	return {
@@ -49,8 +49,8 @@ export function verify_keys(
 	return expected_spend_pub === spend_pub && expected_view_pub === view_pub;
 }
 
-export function random_keypair() {
-	return generate_keys(rand_32());
+export async function random_keypair() {
+	return generate_keys(await rand_32());
 }
 
 // alias

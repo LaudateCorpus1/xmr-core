@@ -79,7 +79,7 @@ function create_transaction(pub_keys, sec_keys, dsts, outputs, mix_outs, fake_ou
         }
         let found_money = biginteger_1.BigInt.ZERO;
         const sources = [];
-        console.log("Selected transfers: ", outputs);
+        // console.log("Selected transfers: ", outputs);
         for (i = 0; i < outputs.length; ++i) {
             found_money = found_money.add(outputs[i].amount);
             if (found_money.compare(UINT64_MAX) !== -1) {
@@ -152,11 +152,15 @@ function create_transaction(pub_keys, sec_keys, dsts, outputs, mix_outs, fake_ou
             src.real_output_in_tx_index = outputs[i].index;
             if (rct) {
                 // if rct, slice encrypted, otherwise will be set by generate_key_image_helper
-                src.mask = outputs[i].rct ? outputs[i].rct.slice(64, 128) : null;
+                if (outputs[i].rct) {
+                    src.mask = outputs[i].rct.length >= 128 ? outputs[i].rct.slice(64, 128) : outputs[i].rct.slice(0, 64)
+                } else {
+                    src.mask = null;
+                }
             }
             sources.push(src);
         }
-        console.log("sources: ", sources);
+        // console.log("sources: ", sources);
         const change = {
             amount: biginteger_1.BigInt.ZERO,
         };
@@ -164,7 +168,7 @@ function create_transaction(pub_keys, sec_keys, dsts, outputs, mix_outs, fake_ou
         if (cmp < 0) {
             change.amount = found_money.subtract(needed_money);
             if (change.amount.compare(fee_amount) !== 0) {
-                throw Error("early fee calculation != later");
+            //    throw Error("early fee calculation != later");
             }
         }
         else if (cmp > 0) {
@@ -179,7 +183,8 @@ function create_transaction(pub_keys, sec_keys, dsts, outputs, mix_outs, fake_ou
     });
 }
 exports.create_transaction = create_transaction;
-function construct_tx(keys, sources, dsts, fee_amount, payment_id, pid_encrypt, destViewKeyPub, unlock_time, rct, nettype, hwdev) {
+async function construct_tx(keys, sources, dsts, fee_amount, payment_id, pid_encrypt, destViewKeyPub, unlock_time, rct, nettype, hwdev) {
+    const txkey = { sec: await hwdev.open_tx(), pub: "" };
     return __awaiter(this, void 0, void 0, function* () {
         xmr_str_utils_1.JSONPrettyPrint("construct_tx", {
             keys,
@@ -194,7 +199,6 @@ function construct_tx(keys, sources, dsts, fee_amount, payment_id, pid_encrypt, 
             nettype,
         }, "args");
         //we move payment ID stuff here, because we need txkey to encrypt
-        const txkey = { sec: yield hwdev.open_tx(), pub: "" };
         let extra = "";
         if (payment_id) {
             if (pid_encrypt && payment_id.length !== xmr_constants_1.INTEGRATED_ID_SIZE * 2) {
@@ -226,11 +230,11 @@ function construct_tx(keys, sources, dsts, fee_amount, payment_id, pid_encrypt, 
         };
         const inputs_money = sources.reduce((totalAmount, { amount }) => totalAmount.add(amount), biginteger_1.BigInt.ZERO);
         let i;
-        console.log("Sources: ");
+        // console.log("Sources: ");
         const sourcesWithKeyImgAndKeys = [];
         let _i = 0;
         for (const source of sources) {
-            console.log(_i + ": " + xmr_money_1.formatMoneyFull(source.amount));
+            // console.log(_i + ": " + xmr_money_1.formatMoneyFull(source.amount));
             if (source.real_output_index >= source.outputs.length) {
                 throw Error("real index >= outputs.length");
             }
@@ -243,6 +247,7 @@ function construct_tx(keys, sources, dsts, fee_amount, payment_id, pid_encrypt, 
             sourcesWithKeyImgAndKeys.push(newSrc);
             _i++;
         }
+
         xmr_str_utils_1.JSONPrettyPrint("construct_tx", {
             sourcesWithKeyImgAndKeys,
         }, "sourcesWithKeyImgAndKeys_pre_sort");

@@ -26,7 +26,7 @@ const { I, Z, identity, H2 } = constants;
 //	 thus this proves that "amount" is in [0, s^n] (we assume s to be 4) (2 for now with v2 txes)
 //	 mask is a such that C = aG + bH, and b = amount
 
-export function proveRange(amount: string | BigInt) {
+export async function proveRange(amount: string | BigInt) {
 	let C = I; //identity
 	let mask = Z; //zero scalar
 
@@ -39,7 +39,7 @@ export function proveRange(amount: string | BigInt) {
 
 	//start at index and fill PM left and right -- PM[0] holds Ci
 	for (let i = 0; i < 64; i++) {
-		ai[i] = random_scalar();
+		ai[i] = await random_scalar();
 
 		if (+indices[i] === 1) {
 			// if b[i] === 1
@@ -60,7 +60,7 @@ export function proveRange(amount: string | BigInt) {
 
 	const sig: RangeSignature = {
 		Ci,
-		bsig: genBorromean(ai, PM, indices), // create a borromean signature to avoid amount ambiguity
+		bsig: await genBorromean(ai, PM, indices), // create a borromean signature to avoid amount ambiguity
 	};
 
 	return { C, mask, sig };

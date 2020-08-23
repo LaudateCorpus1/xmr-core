@@ -156,7 +156,7 @@ senderAddress, senderPrivateKeys, senderPublicKeys, pidToParse, mixin, simplePri
                     }
                     address = singleTarget.address, amount = singleTarget.amount;
                     feelessTotal = new biginteger_1.BigInt(amount);
-                    logger_1.Log.Amount.beforeFee(feelessTotal, isSweeping);
+                    // logger_1.Log.Amount.beforeFee(feelessTotal, isSweeping);
                     if (!isSweeping && feelessTotal.compare(0) <= 0) {
                         throw errors_1.ERR.AMT.INSUFF;
                     }

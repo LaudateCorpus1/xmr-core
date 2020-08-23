@@ -127,7 +127,7 @@ export async function create_transaction(
 	}
 	let found_money = BigInt.ZERO;
 	const sources = [];
-	console.log("Selected transfers: ", outputs);
+	// console.log("Selected transfers: ", outputs);
 
 	for (i = 0; i < outputs.length; ++i) {
 		found_money = found_money.add(outputs[i].amount);
@@ -211,11 +211,15 @@ export async function create_transaction(
 		src.real_output_in_tx_index = outputs[i].index;
 		if (rct) {
 			// if rct, slice encrypted, otherwise will be set by generate_key_image_helper
-			src.mask = outputs[i].rct ? outputs[i].rct.slice(64, 128) : null;
+			if (outputs[i].rct) {
+				src.mask = outputs[i].rct.length >= 128 ? outputs[i].rct.slice(64, 128) : outputs[i].rct.slice(0, 64)
+			} else {
+				src.mask = null;
+			}
 		}
 		sources.push(src);
 	}
-	console.log("sources: ", sources);
+	// console.log("sources: ", sources);
 	const change = {
 		amount: BigInt.ZERO,
 	};
@@ -223,7 +227,7 @@ export async function create_transaction(
 	if (cmp < 0) {
 		change.amount = found_money.subtract(needed_money);
 		if (change.amount.compare(fee_amount) !== 0) {
-			throw Error("early fee calculation != later");
+			// throw Error("early fee calculation != later");
 		}
 	} else if (cmp > 0) {
 		throw Error("Need more money than found! (have: ") +
@@ -233,6 +237,7 @@ export async function create_transaction(
 			")";
 	}
 	await hwdev.set_mode(DeviceMode.TRANSACTION_CREATE_REAL);
+	console.log('constructing1')
 	return construct_tx(
 		keys,
 		sources,
@@ -327,7 +332,7 @@ export async function construct_tx(
 	);
 
 	let i;
-	console.log("Sources: ");
+	// console.log("Sources: ");
 
 	//run the for loop twice to sort ins by key image
 	//first generate key image and other construction data to sort it all in one go
@@ -345,7 +350,7 @@ export async function construct_tx(
 
 	let _i = 0;
 	for (const source of sources) {
-		console.log(_i + ": " + formatMoneyFull(source.amount));
+		// console.log(_i + ": " + formatMoneyFull(source.amount));
 		if (source.real_output_index >= source.outputs.length) {
 			throw Error("real index >= outputs.length");
 		}

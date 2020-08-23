@@ -128,9 +128,9 @@ class DefaultDevice {
     generate_keys(recoveryKey) {
         return __awaiter(this, void 0, void 0, function* () {
             if (recoveryKey) {
-                return key_utils_1.generate_keys(recoveryKey);
+                return yield key_utils_1.generate_keys(recoveryKey);
             }
-            return key_utils_1.random_keypair();
+            return yield key_utils_1.random_keypair();
         });
     }
     generate_key_derivation(pub, sec) {
@@ -172,9 +172,9 @@ class DefaultDevice {
     /*                               TRANSACTION                               */
     /* ======================================================================= */
     // #region TRANSACTION
-    open_tx() {
+    async open_tx() {
+        const { sec } = await key_utils_1.random_keypair();
         return __awaiter(this, void 0, void 0, function* () {
-            const { sec } = key_utils_1.random_keypair();
             return sec;
         });
     }
@@ -208,7 +208,7 @@ class DefaultDevice {
     }
     mlsag_prepare(H, xx) {
         return __awaiter(this, void 0, void 0, function* () {
-            const { sec: a, pub: aG } = key_utils_1.random_keypair();
+            const { sec: a, pub: aG } = yield key_utils_1.random_keypair();
             if (H && xx) {
                 const aHP = yield this.scalarmultKey(H, a);
                 const II = yield this.scalarmultKey(H, xx);

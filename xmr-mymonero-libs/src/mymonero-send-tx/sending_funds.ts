@@ -190,7 +190,7 @@ export async function sendFunds(
 	const { address, amount } = singleTarget;
 	const feelessTotal = new BigInt(amount);
 
-	Log.Amount.beforeFee(feelessTotal, isSweeping);
+	// Log.Amount.beforeFee(feelessTotal, isSweeping);
 
 	if (!isSweeping && feelessTotal.compare(0) <= 0) {
 		throw ERR.AMT.INSUFF;

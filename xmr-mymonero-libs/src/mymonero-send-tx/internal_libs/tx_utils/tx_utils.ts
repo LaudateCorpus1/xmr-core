@@ -54,7 +54,7 @@ export function totalAmtAndEstFee(params: TotalAmtAndEstFeeParams) {
 	/* if (usingOuts.length > 1 && isRingCT )*/
 	const { newFee, totalAmount } = estRctFeeAndAmt(params);
 
-	Log.Fee.basedOnInputs(newFee, usingOuts);
+	// Log.Fee.basedOnInputs(newFee, usingOuts);
 
 	return { newFee, totalAmount };
 }
@@ -234,11 +234,11 @@ export function validateAndConstructFundTargets(
 		// where the change amount is whats left after sending to other addresses + fee
 		const changeAmount = usingOutsAmount.subtract(totalAmount);
 
-		Log.Amount.change(changeAmount);
+		// Log.Amount.change(changeAmount);
 
 		if (isRingCT) {
 			// for RCT we don't presently care about dustiness so add entire change amount
-			Log.Amount.toSelf(changeAmount, senderAddress);
+			// Log.Amount.toSelf(changeAmount, senderAddress);
 
 			fundTargets.push({
 				address: senderAddress,
@@ -251,7 +251,7 @@ export function validateAndConstructFundTargets(
 				config.dustThreshold,
 			);
 
-			Log.Amount.changeAmountDivRem([quotient, remainder]);
+			// Log.Amount.changeAmountDivRem([quotient, remainder]);
 
 			if (!remainder.isZero()) {
 				// miners will add dusty change to fee
@@ -262,7 +262,7 @@ export function validateAndConstructFundTargets(
 				// send non-dusty change to our address
 				const usableChange = quotient.multiply(config.dustThreshold);
 
-				Log.Amount.toSelf(usableChange, senderAddress);
+				// Log.Amount.toSelf(usableChange, senderAddress);
 
 				fundTargets.push({
 					address: senderAddress,
@@ -336,7 +336,7 @@ async function makeSignedTx(params: ConstructTxParams) {
 			hwdev,
 		} = params;
 
-		Log.Target.fullDisplay(fundTargets);
+		// Log.Target.fullDisplay(fundTargets);
 
 		const targetViewKey = getTargetPubViewKey(
 			encryptPid,
@@ -348,7 +348,7 @@ async function makeSignedTx(params: ConstructTxParams) {
 			fundTargets,
 			isRingCT,
 		);
-		Log.Target.displayDecomposed(splitDestinations);
+		// Log.Target.displayDecomposed(splitDestinations);
 
 		const signedTx = await create_transaction(
 			senderPublicKeys,
@@ -372,11 +372,11 @@ async function makeSignedTx(params: ConstructTxParams) {
 			hwdev,
 		);
 
-		Log.Transaction.signed(signedTx);
+		//Log.Transaction.signed(signedTx);
 
 		return { signedTx };
 	} catch (e) {
-		throw ERR.TX.failure(e);
+		throw e;
 	}
 }
 
@@ -396,7 +396,7 @@ function getSerializedTxAndHash(signedTx: SignedTransaction) {
 			txHash,
 		};
 
-		Log.Transaction.serializedAndHash(serializedSignedTx, txHash);
+		//Log.Transaction.serializedAndHash(serializedSignedTx, txHash);
 
 		return ret;
 	}
@@ -409,7 +409,7 @@ function getSerializedTxAndHash(signedTx: SignedTransaction) {
 			txHash: hash,
 		};
 
-		Log.Transaction.serializedAndHash(raw, hash);
+		//Log.Transaction.serializedAndHash(raw, hash);
 
 		return ret;
 	}
@@ -423,7 +423,7 @@ function getTxSize(serializedSignedTx: string, estMinNetworkFee: BigInt) {
 		numOfKB++;
 	}
 
-	Log.Fee.txKB(txBlobBytes, numOfKB, estMinNetworkFee);
+	//Log.Fee.txKB(txBlobBytes, numOfKB, estMinNetworkFee);
 	return { numOfKB };
 }
 

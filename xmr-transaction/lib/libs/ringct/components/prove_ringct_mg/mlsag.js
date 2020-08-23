@@ -65,7 +65,7 @@ function MLSAG_Gen(message, pk, xx, kimg, index, hwdev) {
         toHash[2] = aG; //dsRow L, a.G
         toHash[3] = aHP; //dsRow R (key image check)
         //secret index (commitment section) / nds rows
-        alpha[1] = xmr_crypto_utils_1.random_scalar();
+        alpha[1] = yield xmr_crypto_utils_1.random_scalar();
         toHash[4] = pk[index][1]; //secret index commitment
         toHash[5] = ge_scalarmult_base(alpha[1]); //ndsRow L
         c_old = yield hwdev.mlsag_hash(toHash);
@@ -75,8 +75,8 @@ function MLSAG_Gen(message, pk, xx, kimg, index, hwdev) {
             rv.cc = c_old;
         }
         while (i != index) {
-            rv.ss[i][0] = xmr_crypto_utils_1.random_scalar(); //dsRow ss
-            rv.ss[i][1] = xmr_crypto_utils_1.random_scalar(); //ndsRow ss
+            rv.ss[i][0] = yield xmr_crypto_utils_1.random_scalar(); //dsRow ss
+            rv.ss[i][1] = yield xmr_crypto_utils_1.random_scalar(); //ndsRow ss
             //!secret index (pubkey section)
             toHash[1] = pk[i][0];
             toHash[2] = ge_double_scalarmult_base_vartime(c_old, pk[i][0], rv.ss[i][0]);
