@@ -109,7 +109,7 @@ function estRctSwpingAmt(usingOutsAmount, fee) {
     // if the feeless total is less than 0 (so sum of all outputs is still less than network fee)
     // then reject tx
     if (_feelessTotal.compare(0) < 1) {
-        throw errors_1.ERR.BAL.insuff(usingOutsAmount, fee);
+        throw new Error('NOT ENOUGHT BALANCE');
     }
     // otherwise make the total amount the feeless total + the new fee
     var totalAmount = _feelessTotal.add(fee);
@@ -163,7 +163,7 @@ function validateAndConstructFundTargets(params) {
     // while also building up a list of addresses to send to
     // along with the amounts
     if (outsLessThanTotal) {
-        throw errors_1.ERR.BAL.insuff(usingOutsAmount, totalAmount);
+        throw new Error('NOT ENOUGHT BALANCE');
     }
     // Now we can put together the list of fund transfers we need to perform
     // excluding the tx fee
